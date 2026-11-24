@@ -15,18 +15,35 @@ class _SplashViewBodyState extends State<SplashViewBody> {
   @override
   void initState() {
     super.initState();
-    _navigateToNextScreen();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      _navigateToNextScreen();
+    });
   }
 
   Future<void> _navigateToNextScreen() async {
+    // Do not redirect if SplashView is not the top-most visible route
+    final isCurrent = ModalRoute.of(context)?.isCurrent ?? true;
+    if (!isCurrent) return;
+
     final isOnboardingCompleted = await CacheHelper.isOnboardingCompleted();
+    final isUserLoggedIn = await CacheHelper.isUserLoggedIn();
+
     await Future.delayed(const Duration(seconds: 1));
     if (!mounted) return;
 
-    if (isOnboardingCompleted) {
-      Navigator.pushReplacementNamed(context, Routes.loginView);
-    } else {
+    // Check again before navigating
+    final isStillCurrent = ModalRoute.of(context)?.isCurrent ?? true;
+    if (!isStillCurrent) return;
+
+    if (!isOnboardingCompleted) {
+      // 1. First time app open -> Onboarding
       Navigator.pushReplacementNamed(context, Routes.onBoardingView);
+    } else if (isUserLoggedIn) {
+      // 2. User logged in & session cached -> HomeView
+      Navigator.pushReplacementNamed(context, Routes.homeView);
+    } else {
+      // 3. Onboarding completed but not logged in -> LoginView
+      Navigator.pushReplacementNamed(context, Routes.loginView);
     }
   }
 

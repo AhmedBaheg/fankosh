@@ -73,6 +73,55 @@
   "continueToPayment": "متابعة للدفع ({price} ج)",
   "tryFankoshFree": "جرّب فانكوش مجانًا",
 
+  "attemptsCount": "{count} محاولات",
+  "homeBubbleLine1": "قول أي حاجة... وفانكوش",
+  "homeBubbleLine2": "هيرد عليك بإفيه! 😂",
+  "tapToRecord": "أضغط لبدء التسجيل",
+  "orUploadAudio": "أو ارفع مقطع صوتي",
+  "tabPackages": "الباقات",
+
+  "micPermissionTitle": "عايزين نسمعك",
+  "micPermissionSubtitle": "التطبيق محتاج إذن استخدام الميكروفون عشان تسجل الإفيه اللي فاكره ونطلعه في ثانية.",
+  "allowAccess": "سماح",
+  "notNow": "مش دلوقتي",
+
+  "recordingTitleLine1": "قول اللي في بالك..",
+  "recordingTitleLine2": "سامعينك!",
+  "recordingInProgress": "جاري التسجيل...",
+  "tapToStopRecording": "اضغط لإنهاء التسجيل",
+  "maxRecordingDuration": "الحد الأقصى للتسجيل: {seconds} ثانية",
+
+  "recordingResultTitle": "ده تسجيلك!",
+  "recordingResultSubtitle": "اسمعه ولو حابب سجل من جديد",
+  "deleteRecording": "حذف التسجيل",
+  "recordAgain": "سجل من جديد",
+  "findPunchline": "يلا نلاقي الإفيه!",
+
+  "processingTitle": "فانكوش بيحضّرك الرد! 🍿",
+  "smartFankoshBadge": "فانكوش الذكي",
+  "recognizingStatus": "جار التعرف",
+  "waitTitle": "استنى..",
+  "preparingReplySubtitle": "بنحضّرلك رد جامد ! 🎬",
+  "searchingForPunchline": "بندور على الإفيه المناسب..",
+  "searchingStatus": "جار البحث",
+
+  "foundPunchlineTitle": "أيووووه! قفشت الإفيه! 😍",
+  "listenToThisSubtitle": "استنى بقى... اسمع دي! 😂",
+  "takePunchlineHere": "خد الإفيه ده عندك! 🎧",
+
+  "shareDialogTitle": "عجبك رد فانكوش؟ 😂",
+  "shareDialogSubtitle": "شارك كلامك ورد فانكوش مع صحابك!",
+  "yourVoiceAndFankosh": "صوتك + رد فانكوش",
+  "sharePunchline": "شارك القفشة",
+
+  "attemptsExhaustedTitle": "القفشات ببلاش خلصت!",
+  "attemptsExhaustedSubtitle1": "بس لسه عندنا ضحك كتير!",
+  "attemptsExhaustedSubtitle2": "اختار باقتك وكمّل مع فانكوش.",
+  "benefitContinuedLaughs": "ضحك مكمّل",
+  "benefitMoreAttempts": "محاولات أكتر",
+  "benefitMorePunchlines": "قفشات أكتر",
+  "explorePlans": "اكتشف الباقات",
+
   "fullNameLabel": "الاسم الكامل",
   "fullNameHint": "أدخل اسمك بالكامل",
   "phoneLabel": "رقم الهاتف",
@@ -122,12 +171,5 @@
   "privacyPolicy": "سياسة الخصوصية",
   "logout": "تسجيل الخروج",
   "deleteAccount": "حذف الحساب",
-  "logoutConfirmation": "هل أنت متأكد من رغبتك في تسجيل الخروج؟",
-
-  "errorOccurred": "حدث خطأ ما. يرجى المحاولة مرة أخرى.",
-  "checkInternet": "يرجى التحقق من اتصالك بالإنترنت.",
-  "fieldRequired": "هذا الحقل مطلوب.",
-  "invalidEmail": "يرجى إدخال بريد إلكتروني صالح.",
-  "passwordTooShort": "كلمة المرور يجب ألا تقل عن 8 أحرف.",
-  "passwordsDoNotMatch": "كلمتا المرور غير متطابقتين."
+  "logoutConfirmation": "هل أنت متأكد من رغبتك في تسجيل الخروج؟"
 }

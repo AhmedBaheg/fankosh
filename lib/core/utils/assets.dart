@@ -1,191 +1,161 @@
 /// Centralized asset path constants for the Fankosh application.
 ///
-/// Follows standard `static const String name = "assets/..."` syntax.
+/// Every constant maps to a verified file in the `assets/` directory.
 abstract final class AppAssets {
   AppAssets._();
 
   // ==========================================
-  // IMAGES (PNG) - Mobile App
+  // IMAGES (PNG) - Real Files
   // ==========================================
-  /// Splash screen dreamy pastel gradient background (Node 1:3258)
+  /// Splash screen background
   static const String splashBackground = "assets/images/splach_bg.png";
   static const String splachBg = "assets/images/splach_bg.png";
 
-  /// Primary Fankosh app logo (Node 1:3259 / 1:3285)
+  /// App Logo
   static const String appLogo = "assets/images/logo_app.png";
   static const String logoApp = "assets/images/logo_app.png";
 
-  /// Cheerful popcorn bucket mascot sticker (Node 1:3261)
-  static const String popcornMascotCheerful = "assets/images/popcorn_mascot_cheerful.png";
+  /// Home screen background artwork
+  static const String homeBg = "assets/images/home_bg.png";
 
-  /// Laughing popcorn finger-guns sticker (Node 1:3295)
-  static const String popcornMascotLaughing = "assets/images/popcorn_mascot_laughing.png";
+  /// Microphone recording 3D image
+  static const String micImage = "assets/images/mic_image.png";
 
-  /// Popcorn mascot celebrating / thinking (Node 1:3260 / 1:3277)
-  static const String popcornMascotCelebrating = "assets/images/popcorn_mascot_celebrating.png";
-
-  /// Floating glossy golden popcorn cluster pieces (Node 1:3300)
-  static const String popcornCluster = "assets/images/popcorn_cluster.png";
-
-  /// 3D Cartoon glove fist sticker (Node 1:3299)
-  static const String cartoonGloveFist = "assets/images/cartoon_glove_fist.png";
-
-  /// Comic burst star sticker (Node 1:3262)
-  static const String comicSticker = "assets/images/comic_sticker.png";
-
-  /// Audio speech bubble container background card (Node 1:3296)
-  static const String speechBubbleCard = "assets/images/speech_bubble_card.png";
-
-  /// Default user profile avatar placeholder
-  static const String avatarPlaceholder = "assets/images/avatar_placeholder.png";
-
-  /// Confident podcast mascot sticker (Node 1:5387 - Onboarding 1)
+  /// Onboarding page 1 illustration
   static const String onboard1 = "assets/images/onboard_1.png";
   static const String podcastSticker = "assets/images/onboard_1.png";
 
-  /// Laughing media character sticker (Node 1:5440 - Onboarding 2)
+  /// Onboarding page 2 illustration
   static const String onboard2 = "assets/images/onboard_2.png";
   static const String mediaSticker = "assets/images/onboard_2.png";
 
-  /// Out of attempts recording stickers (Node 1:3574 - Screen 25)
-  static const String recordingStickers = "assets/images/recording_stickers.png";
-
-  /// Kawaii calendar birthday celebration (Node 1:3701 - Screen 12)
-  static const String calendarBirthday = "assets/images/calendar_birthday.png";
-
-  /// Celebratory suitcase jump cartoon (Node 1:6141 - Screen 20)
-  static const String celebratorySuitcase = "assets/images/celebratory_suitcase.png";
+  /// Free attempts exhausted illustration (trials_finished.png)
+  static const String trialsFinished = "assets/images/trials_finished.png";
 
   // ==========================================
-  // ICONS (SVG)
+  // ICONS (SVG) - Audio & Recording (Semantic Names)
+  // ==========================================
+  /// Microphone icon
+  static const String microphone = "assets/icons/microphone.svg";
+  static const String micSymbolIcon = "assets/icons/ic_mic_symbol.svg";
+  static const String icMic = microphone;
+  static const String micSparkleIcon = microphone;
+
+  /// Play triangle icon
+  static const String playIcon = "assets/icons/play.svg";
+  static const String icPlayTriangle = playIcon;
+
+  /// Pause icon
+  static const String pauseIcon = "assets/icons/pause.svg";
+
+  /// Delete / trash icon
+  static const String deleteIcon = "assets/icons/delete.svg";
+  static const String icTrashRed = deleteIcon;
+
+  /// Upload audio file icon
+  static const String uploadAudioIcon = "assets/icons/upload_audio.svg";
+  static const String documentUploadIcon = "assets/icons/ic_document_upload.svg";
+  static const String icUpload = uploadAudioIcon;
+
+  /// Active recording indicator icon
+  static const String recordingIcon = "assets/icons/recording.svg";
+  static const String icRecording = recordingIcon;
+
+  /// Sparkles icon
+  static const String sparklesIcon = "assets/icons/sparkles.svg";
+  static const String icSparkles = sparklesIcon;
+
+  /// Stop recording icon
+  static const String stopRecordingIcon = "assets/icons/stop_recording.svg";
+  static const String icEndRecording = stopRecordingIcon;
+
+  /// Record again icon
+  static const String recordAgainIcon = "assets/icons/record_again.svg";
+  static const String icRecordMic = recordAgainIcon;
+
+  /// Timer clock icon
+  static const String timerIcon = "assets/icons/timer.svg";
+  static const String icTimer = timerIcon;
+
+  // ==========================================
+  // ICONS (SVG) - Navigation & Shared App Assets
   // ==========================================
   /// Email envelope icon
-  static const String emailIcon = "assets/icons/email.svg";
+  static const String emailIcon = "assets/icons/ic_email.svg";
+  static const String icEmail = "assets/icons/ic_email.svg";
 
-  /// Bottom navigation Home tab (Active - Blue)
-  static const String homeActiveIcon = "assets/icons/ic_home_active.svg";
-
-  /// Bottom navigation Home tab (Inactive - Gray)
-  static const String homeInactiveIcon = "assets/icons/ic_home_inactive.svg";
-
-  /// Bottom navigation Plans/Packages tab (Active - Gold)
-  static const String plansActiveIcon = "assets/icons/ic_plans_active.svg";
-
-  /// Bottom navigation Plans/Packages tab (Inactive - Gray)
-  static const String plansInactiveIcon = "assets/icons/ic_plans_inactive.svg";
-
-  /// Bottom navigation Profile/Account tab (Active - Blue)
-  static const String profileActiveIcon = "assets/icons/ic_profile_active.svg";
-
-  /// Bottom navigation Profile/Account tab (Inactive - Gray)
-  static const String profileInactiveIcon = "assets/icons/ic_profile_inactive.svg";
-
-  /// Notification bell icon
-  static const String notificationIcon = "assets/icons/ic_notification.svg";
-
-  /// Notification bell with unread badge indicator
-  static const String notificationActiveIcon = "assets/icons/ic_notification_active.svg";
-
-  /// Header user profile circle icon
-  static const String userCircleIcon = "assets/icons/ic_user_circle.svg";
-
-  /// Attempts counter lightning icon
-  static const String attemptsLightningIcon = "assets/icons/ic_attempts_lightning.svg";
-
-  /// Central recording microphone button with sparkle
-  static const String micSparkleIcon = "assets/icons/ic_mic_sparkle.svg";
-
-  /// Audio playback play icon
-  static const String playIcon = "assets/icons/ic_play.svg";
-
-  /// Audio playback pause icon
-  static const String pauseIcon = "assets/icons/ic_pause.svg";
-
-  /// Upload audio file action pill icon
-  static const String uploadAudioIcon = "assets/icons/ic_upload_audio.svg";
-
-  /// Re-record / refresh audio icon
-  static const String refreshIcon = "assets/icons/ic_refresh.svg";
-
-  /// Delete recording trash icon
-  static const String trashDeleteIcon = "assets/icons/ic_trash_delete.svg";
-
-  /// Audio waveform equalizer icon
-  static const String audioWaveIcon = "assets/icons/ic_audio_wave.svg";
-
-  /// Share audio / joke icon
-  static const String shareIcon = "assets/icons/ic_share.svg";
-
-  /// Return back arrow (RTL-aware)
+  /// Return back arrow
   static const String arrowBackIcon = "assets/icons/ic_arrow_back.svg";
 
-  /// Forward chevron arrow
-  static const String arrowForwardIcon = "assets/icons/ic_arrow_forward.svg";
+  /// Bundles / Plans icon
+  static const String icBundles = "assets/icons/ic_bundles.svg";
+  static const String plansActiveIcon = "assets/icons/ic_bundles.svg";
+  static const String plansInactiveIcon = "assets/icons/ic_bundles.svg";
+  static const String attemptsLightningIcon = "assets/icons/ic_benefit_lightning.svg";
 
-  /// Close modal / dialog X icon
-  static const String closeIcon = "assets/icons/ic_close.svg";
+  /// Chevron down arrow
+  static const String chevronDownIcon = "assets/icons/ic_chevron_down.svg";
+  static const String closeIcon = "assets/icons/ic_chevron_down.svg";
 
-  /// Simple checkmark
-  static const String checkIcon = "assets/icons/ic_check.svg";
-
-  /// Green circular success checkmark
-  static const String checkCircleIcon = "assets/icons/ic_check_circle.svg";
-
-  /// Star rating / celebration icon
-  static const String starIcon = "assets/icons/ic_star.svg";
-
-  /// Search magnifying glass icon
-  static const String searchIcon = "assets/icons/ic_search.svg";
-
-  /// Edit profile pen icon
-  static const String editIcon = "assets/icons/ic_edit.svg";
-
-  /// Logout action door icon
-  static const String logoutIcon = "assets/icons/ic_logout.svg";
-
-  /// Credit card payment option
-  static const String creditCardIcon = "assets/icons/ic_credit_card.svg";
-
-  /// Digital wallet payment option
-  static const String walletIcon = "assets/icons/ic_wallet.svg";
-
-  /// Fawry / cash payment option
-  static const String fawryIcon = "assets/icons/ic_fawry.svg";
-
-  /// Birthday calendar date picker icon
-  static const String calendarIcon = "assets/icons/ic_calendar.svg";
-
-  /// Settings gear icon
-  static const String settingsIcon = "assets/icons/ic_settings.svg";
-
-  /// Privacy & security lock icon
-  static const String lockIcon = "assets/icons/ic_lock.svg";
-
-  /// Language globe icon
-  static const String globeIcon = "assets/icons/ic_globe.svg";
-
-  /// Help & support headset/lifebuoy icon
-  static const String supportIcon = "assets/icons/ic_support.svg";
-
-  /// Password visibility icons
+  /// Eye password visibility icons
   static const String eyeIcon = "assets/icons/ic_eye.svg";
   static const String eyeOffIcon = "assets/icons/ic_eye_off.svg";
 
-  /// Social auth icons
-  static const String googleIcon = "assets/icons/ic_google.svg";
-  static const String facebookIcon = "assets/icons/ic_facebook.svg";
-  static const String appleIcon = "assets/icons/ic_apple.svg";
+  /// Globe icon
+  static const String globeIcon = "assets/icons/ic_globe.svg";
 
-  /// Form field icons
-  static const String icEmail = "assets/icons/ic_email.svg";
-  static const String icLock = "assets/icons/ic_lock.svg";
-  static const String icLogin = "assets/icons/ic_login.svg";
-  static const String loginIcon = "assets/icons/ic_login.svg";
-  static const String phoneIcon = "assets/icons/ic_phone.svg";
-  static const String userIcon = "assets/icons/ic_user.svg";
-  static const String chevronDownIcon = "assets/icons/ic_chevron_down.svg";
-  static const String circleOutlineIcon = "assets/icons/ic_circle_outline.svg";
-  static const String loginArrowIcon = "assets/icons/ic_login_arrow.svg";
-  static const String icStar = "assets/icons/ic_star.svg";
+  /// Home navigation icon
+  static const String icHome = "assets/icons/ic_home.svg";
+  static const String homeActiveIcon = "assets/icons/ic_home.svg";
+  static const String homeInactiveIcon = "assets/icons/ic_home.svg";
+
+  /// Left arrow icon
   static const String icLeft = "assets/icons/ic_left.svg";
+
+  /// Lock icon
+  static const String lockIcon = "assets/icons/ic_lock.svg";
+  static const String icLock = "assets/icons/ic_lock.svg";
+
+  /// Login icon
+  static const String loginIcon = "assets/icons/ic_login.svg";
+  static const String icLogin = "assets/icons/ic_login.svg";
+
+  /// Notification bell icon
+  static const String notificationIcon = "assets/icons/ic_notification.svg";
+  static const String icNotification = "assets/icons/ic_notification.svg";
+  static const String notificationActiveIcon = "assets/icons/ic_notification.svg";
+
+  /// User profile circle icon
+  static const String userCircleIcon = "assets/icons/ic_profile.svg";
+  static const String icProfile = "assets/icons/ic_profile.svg";
+  static const String profileActiveIcon = "assets/icons/ic_user_nav_bar.svg";
+  static const String profileInactiveIcon = "assets/icons/ic_user_nav_bar.svg";
+
+  /// Star icon
+  static const String starIcon = "assets/icons/ic_star.svg";
+  static const String icStar = "assets/icons/ic_star.svg";
+  static const String checkCircleIcon = "assets/icons/ic_star.svg";
+
+  /// Trails icon
+  static const String icTrails = "assets/icons/ic_trails.svg";
+
+  /// User form icon
+  static const String userIcon = "assets/icons/ic_user.svg";
+  static const String searchIcon = "assets/icons/ic_user.svg";
+
+  /// User navigation bar icon
+  static const String icUserNavBar = "assets/icons/ic_user_nav_bar.svg";
+
+  /// Permission dialog icons (Frame 5)
+  static const String icMicPermission = "assets/icons/ic_mic_permision.svg";
+  static const String icAllow = "assets/icons/ic_allow.svg";
+
+  /// Pages 8, 9, 10, 11 & 25 Assets
+  static const String searchMagnifierIcon = "assets/icons/ic_search_glass.svg";
+  static const String searchGlassIcon = "assets/icons/ic_search_glass.svg";
+  static const String shareBadgeIcon = "assets/icons/ic_share_badge.svg";
+  static const String shareNodesIcon = "assets/icons/ic_share_nodes.svg";
+  static const String benefitLaughIcon = "assets/icons/ic_benefit_laugh.svg";
+  static const String benefitLightningIcon = "assets/icons/ic_benefit_lightning.svg";
+  static const String benefitClapperIcon = "assets/icons/ic_benefit_clapper.svg";
 }

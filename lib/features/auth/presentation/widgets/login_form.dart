@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/routing/routes.dart';
 import '../../../../core/shared_widgets/primary_button.dart';
 import '../../../../core/utils/assets.dart';
+import '../../../../core/utils/cache_helper.dart';
 import '../../../../l10n/app_localizations.dart';
 import 'email_text_field.dart';
 import 'password_text_field.dart';
@@ -37,18 +38,18 @@ class _LoginFormState extends State<LoginForm> {
     super.dispose();
   }
 
-  void _onLoginPressed() {
+  Future<void> _onLoginPressed() async {
     if (_formKey.currentState?.validate() ?? false) {
       setState(() {
         _isLoading = true;
       });
-      Future.delayed(const Duration(milliseconds: 600), () {
-        if (!mounted) return;
-        setState(() {
-          _isLoading = false;
-        });
-        Navigator.pushReplacementNamed(context, Routes.subscriptionPlansView);
+      await CacheHelper.setUserLoggedIn(loggedIn: true);
+      await Future.delayed(const Duration(milliseconds: 600));
+      if (!mounted) return;
+      setState(() {
+        _isLoading = false;
       });
+      Navigator.pushReplacementNamed(context, Routes.subscriptionPlansView);
     }
   }
 

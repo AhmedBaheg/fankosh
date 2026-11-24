@@ -219,6 +219,134 @@ class AppLocalizationsAr extends AppLocalizations {
   String get tryFankoshFree => 'جرّب فانكوش مجانًا';
 
   @override
+  String attemptsCount(Object count) {
+    return '$count محاولات';
+  }
+
+  @override
+  String get homeBubbleLine1 => 'قول أي حاجة... وفانكوش';
+
+  @override
+  String get homeBubbleLine2 => 'هيرد عليك بإفيه! 😂';
+
+  @override
+  String get tapToRecord => 'أضغط لبدء التسجيل';
+
+  @override
+  String get orUploadAudio => 'أو ارفع مقطع صوتي';
+
+  @override
+  String get tabPackages => 'الباقات';
+
+  @override
+  String get micPermissionTitle => 'عايزين نسمعك';
+
+  @override
+  String get micPermissionSubtitle =>
+      'التطبيق محتاج إذن استخدام الميكروفون عشان تسجل الإفيه اللي فاكره ونطلعه في ثانية.';
+
+  @override
+  String get allowAccess => 'سماح';
+
+  @override
+  String get notNow => 'مش دلوقتي';
+
+  @override
+  String get recordingTitleLine1 => 'قول اللي في بالك..';
+
+  @override
+  String get recordingTitleLine2 => 'سامعينك!';
+
+  @override
+  String get recordingInProgress => 'جاري التسجيل...';
+
+  @override
+  String get tapToStopRecording => 'اضغط لإنهاء التسجيل';
+
+  @override
+  String maxRecordingDuration(Object seconds) {
+    return 'الحد الأقصى للتسجيل: $seconds ثانية';
+  }
+
+  @override
+  String get recordingResultTitle => 'ده تسجيلك!';
+
+  @override
+  String get recordingResultSubtitle => 'اسمعه ولو حابب سجل من جديد';
+
+  @override
+  String get deleteRecording => 'حذف التسجيل';
+
+  @override
+  String get recordAgain => 'سجل من جديد';
+
+  @override
+  String get findPunchline => 'يلا نلاقي الإفيه!';
+
+  @override
+  String get processingTitle => 'فانكوش بيحضّرك الرد! 🍿';
+
+  @override
+  String get smartFankoshBadge => 'فانكوش الذكي';
+
+  @override
+  String get recognizingStatus => 'جار التعرف';
+
+  @override
+  String get waitTitle => 'استنى..';
+
+  @override
+  String get preparingReplySubtitle => 'بنحضّرلك رد جامد ! 🎬';
+
+  @override
+  String get searchingForPunchline => 'بندور على الإفيه المناسب..';
+
+  @override
+  String get searchingStatus => 'جار البحث';
+
+  @override
+  String get foundPunchlineTitle => 'أيووووه! قفشت الإفيه! 😍';
+
+  @override
+  String get listenToThisSubtitle => 'استنى بقى... اسمع دي! 😂';
+
+  @override
+  String get takePunchlineHere => 'خد الإفيه ده عندك! 🎧';
+
+  @override
+  String get shareDialogTitle => 'عجبك رد فانكوش؟ 😂';
+
+  @override
+  String get shareDialogSubtitle => 'شارك كلامك ورد فانكوش مع صحابك!';
+
+  @override
+  String get yourVoiceAndFankosh => 'صوتك + رد فانكوش';
+
+  @override
+  String get sharePunchline => 'شارك القفشة';
+
+  @override
+  String get attemptsExhaustedTitle => 'القفشات ببلاش خلصت!';
+
+  @override
+  String get attemptsExhaustedSubtitle1 => 'بس لسه عندنا ضحك كتير!';
+
+  @override
+  String get attemptsExhaustedSubtitle2 => 'اختار باقتك وكمّل مع فانكوش.';
+
+  @override
+  String get benefitContinuedLaughs => 'ضحك مكمّل';
+
+  @override
+  String get benefitMoreAttempts => 'محاولات أكتر';
+
+  @override
+  String get benefitMorePunchlines => 'قفشات أكتر';
+
+  @override
+  String get explorePlans => 'اكتشف الباقات';
+
+  @override
   String get fullNameLabel => 'الاسم الكامل';
 
   @override
@@ -355,22 +483,4 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get logoutConfirmation => 'هل أنت متأكد من رغبتك في تسجيل الخروج؟';
-
-  @override
-  String get errorOccurred => 'حدث خطأ ما. يرجى المحاولة مرة أخرى.';
-
-  @override
-  String get checkInternet => 'يرجى التحقق من اتصالك بالإنترنت.';
-
-  @override
-  String get fieldRequired => 'هذا الحقل مطلوب.';
-
-  @override
-  String get invalidEmail => 'يرجى إدخال بريد إلكتروني صالح.';
-
-  @override
-  String get passwordTooShort => 'كلمة المرور يجب ألا تقل عن 8 أحرف.';
-
-  @override
-  String get passwordsDoNotMatch => 'كلمتا المرور غير متطابقتين.';
 }

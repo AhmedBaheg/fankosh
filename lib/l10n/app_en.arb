@@ -73,6 +73,55 @@
   "continueToPayment": "Continue to Pay ({price} EGP)",
   "tryFankoshFree": "Try Fankosh for Free",
 
+  "attemptsCount": "{count} Attempts",
+  "homeBubbleLine1": "Say anything... Fankosh",
+  "homeBubbleLine2": "will reply with a punchline! 😂",
+  "tapToRecord": "Tap to start recording",
+  "orUploadAudio": "Or upload an audio clip",
+  "tabPackages": "Plans",
+
+  "micPermissionTitle": "We want to hear you",
+  "micPermissionSubtitle": "The app needs microphone permission so you can record the punchline you remember and bring it up in a second.",
+  "allowAccess": "Allow",
+  "notNow": "Not Now",
+
+  "recordingTitleLine1": "Say what's on your mind..",
+  "recordingTitleLine2": "We are listening!",
+  "recordingInProgress": "Recording in progress...",
+  "tapToStopRecording": "Tap to stop recording",
+  "maxRecordingDuration": "Max recording duration: {seconds} seconds",
+
+  "recordingResultTitle": "This is your recording!",
+  "recordingResultSubtitle": "Listen to it, or record again if you like",
+  "deleteRecording": "Delete Recording",
+  "recordAgain": "Record Again",
+  "findPunchline": "Let's find the punchline!",
+
+  "processingTitle": "Fankosh is preparing your reply! 🍿",
+  "smartFankoshBadge": "Smart Fankosh ✨",
+  "recognizingStatus": "Recognizing",
+  "waitTitle": "Hold on..",
+  "preparingReplySubtitle": "Preparing a awesome reply for you! 🎬",
+  "searchingForPunchline": "Searching for the right punchline..",
+  "searchingStatus": "Searching",
+
+  "foundPunchlineTitle": "Yesss! Caught the punchline! 😍",
+  "listenToThisSubtitle": "Wait for it... Listen to this! 😂",
+  "takePunchlineHere": "Take this punchline with you! 🎧",
+
+  "shareDialogTitle": "Did you like Fankosh's reply? 😂",
+  "shareDialogSubtitle": "Share your voice and Fankosh's reply with your friends!",
+  "yourVoiceAndFankosh": "Your voice + Fankosh reply",
+  "sharePunchline": "Share Punchline",
+
+  "attemptsExhaustedTitle": "Free punchlines are over!",
+  "attemptsExhaustedSubtitle1": "But we still have plenty of laughs!",
+  "attemptsExhaustedSubtitle2": "Choose your plan and keep going with Fankosh.",
+  "benefitContinuedLaughs": "Non-stop Laughs",
+  "benefitMoreAttempts": "More Attempts",
+  "benefitMorePunchlines": "More Punchlines",
+  "explorePlans": "Explore Plans",
+
   "fullNameLabel": "Full Name",
   "fullNameHint": "Enter your full name",
   "phoneLabel": "Phone Number",
@@ -122,12 +171,5 @@
   "privacyPolicy": "Privacy Policy",
   "logout": "Log Out",
   "deleteAccount": "Delete Account",
-  "logoutConfirmation": "Are you sure you want to log out?",
-
-  "errorOccurred": "Something went wrong. Please try again.",
-  "checkInternet": "Please check your internet connection.",
-  "fieldRequired": "This field is required.",
-  "invalidEmail": "Please enter a valid email address.",
-  "passwordTooShort": "Password must be at least 8 characters long.",
-  "passwordsDoNotMatch": "Passwords do not match."
+  "logoutConfirmation": "Are you sure you want to log out?"
 }

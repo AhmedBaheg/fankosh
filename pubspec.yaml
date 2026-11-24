@@ -47,6 +47,9 @@ dependencies:
   # Key-value persistent local storage
   shared_preferences: ^2.5.2
 
+  # Cross-platform Android & iOS permission handler
+  permission_handler: ^11.3.1
+
   # Flutter Localization
   flutter_localizations:
     sdk: flutter

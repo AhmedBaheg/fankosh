@@ -29,6 +29,10 @@ abstract final class AppColors {
   /// Deep espresso brand dark used in drawer headers and accents (#2F1900)
   static const Color primaryBrandDark = Color(0xFF2F1900);
 
+  /// Bottom nav bar border color (#FCD66C)
+  static const Color navBorder = Color(0xFFFCD66C);
+  static const Color navText = Color(0xFF6B6965);
+
   // ==========================================
   // 2. SECONDARY BRAND COLORS (Interactive Blue)
   // ==========================================
@@ -58,6 +62,48 @@ abstract final class AppColors {
 
   /// Warm subtle card fill used in segmented controls and chips (#FEFAF0)
   static const Color surfaceWarm = Color(0xFFFEFAF0);
+
+  /// User voice message bubble fill in recognition chat (#FEF0CE)
+  static const Color userBubbleBackground = Color(0xFFFEF0CE);
+
+  /// Dark olive-gold play icon fill in voice preview bubble (#6F5500)
+  static const Color playIconBrown = Color(0xFF6F5500);
+
+  /// User voice bubble duration and waveform bar color (#815600)
+  static const Color userBubbleText = Color(0xFF815600);
+
+  /// AI message searching card background in recognition chat (#FFFBF0)
+  static const Color aiSearchingCardBg = Color(0xFFFFFBF0);
+
+  /// AI message searching card border in recognition chat (#F4E6C0)
+  static const Color aiSearchingCardBorder = Color(0xFFF4E6C0);
+
+  /// AI message bubble border with 70% opacity (#E8E2D4B2)
+  static const Color aiBubbleBorder = Color(0xB2E8E2D4);
+
+  /// AI search overlay circular background tint 25% opacity (#FFC92840)
+  static const Color searchOverlayBg = Color(0x40FFC928);
+
+  /// Vibrant accent cyan-blue used for searching pill badge (#43BDFD)
+  static const Color searchingBadgeBlue = Color(0xFF43BDFD);
+
+  /// Gray-brown status caption text (#807660)
+  static const Color textGrayBrown = Color(0xFF807660);
+
+  /// Share dialog subtitle text color (#4A454E)
+  static const Color dialogSubtitleText = Color(0xFF4A454E);
+
+  /// Share dialog muted text and action color (#6B6572)
+  static const Color dialogMutedText = Color(0xFF6B6572);
+
+  /// Share dialog duration timestamp text color (#9C9484)
+  static const Color dialogTimestampText = Color(0xFF9C9484);
+
+  /// Share dialog inner audio player card background (#F6F5F2)
+  static const Color dialogCardBg = Color(0xFFF6F5F2);
+
+  /// Share dialog secondary cancel button background (#F0EFEF)
+  static const Color dialogBtnSecondaryBg = Color(0xFFF0EFEF);
 
   /// Warm off-white surface for utility bars and horizontal strips (#FAF7F2)
   static const Color surfaceSubtle = Color(0xFFFAF7F2);

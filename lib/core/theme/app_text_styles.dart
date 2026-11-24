@@ -349,6 +349,16 @@ abstract final class AppTextStyles {
     height: 1.43,
     letterSpacing: 0.0,
   );
+
+  /// User voice bubble duration timestamp (Alexandria, 11px, SemiBold, #815600)
+  static final TextStyle voiceBubbleDuration = GoogleFonts.alexandria(
+    fontSize: 11,
+    fontWeight: FontWeight.w600,
+    fontStyle: FontStyle.normal,
+    color: AppColors.userBubbleText,
+    height: 14 / 11,
+    letterSpacing: 0.0,
+  );
 }
 
 /// Convenience extensions for fluent styling

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../core/routing/routes.dart';
 import '../../data/models/subscription_plan_model.dart';
 import 'pay_button.dart';
 import 'subscription_plan_card.dart';
@@ -62,20 +63,21 @@ class _SubscriptionPlansViewBodyState
     setState(() {
       _isProcessing = true;
     });
-    Future.delayed(const Duration(seconds: 1), () {
+    Future.delayed(const Duration(milliseconds: 600), () {
       if (!mounted) return;
       setState(() {
         _isProcessing = false;
       });
+      Navigator.pushReplacementNamed(context, Routes.homeView);
     });
   }
 
   void _onSkipPressed() {
-    // Navigation progression when user skips plans selection
+    Navigator.pushReplacementNamed(context, Routes.homeView);
   }
 
   void _onTryFreePressed() {
-    // Navigation progression for free tier trial
+    Navigator.pushReplacementNamed(context, Routes.homeView);
   }
 
   @override

@@ -500,6 +500,252 @@ abstract class AppLocalizations {
   /// **'Try Fankosh for Free'**
   String get tryFankoshFree;
 
+  /// No description provided for @attemptsCount.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} Attempts'**
+  String attemptsCount(Object count);
+
+  /// No description provided for @homeBubbleLine1.
+  ///
+  /// In en, this message translates to:
+  /// **'Say anything... Fankosh'**
+  String get homeBubbleLine1;
+
+  /// No description provided for @homeBubbleLine2.
+  ///
+  /// In en, this message translates to:
+  /// **'will reply with a punchline! 😂'**
+  String get homeBubbleLine2;
+
+  /// No description provided for @tapToRecord.
+  ///
+  /// In en, this message translates to:
+  /// **'Tap to start recording'**
+  String get tapToRecord;
+
+  /// No description provided for @orUploadAudio.
+  ///
+  /// In en, this message translates to:
+  /// **'Or upload an audio clip'**
+  String get orUploadAudio;
+
+  /// No description provided for @tabPackages.
+  ///
+  /// In en, this message translates to:
+  /// **'Plans'**
+  String get tabPackages;
+
+  /// No description provided for @micPermissionTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'We want to hear you'**
+  String get micPermissionTitle;
+
+  /// No description provided for @micPermissionSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'The app needs microphone permission so you can record the punchline you remember and bring it up in a second.'**
+  String get micPermissionSubtitle;
+
+  /// No description provided for @allowAccess.
+  ///
+  /// In en, this message translates to:
+  /// **'Allow'**
+  String get allowAccess;
+
+  /// No description provided for @notNow.
+  ///
+  /// In en, this message translates to:
+  /// **'Not Now'**
+  String get notNow;
+
+  /// No description provided for @recordingTitleLine1.
+  ///
+  /// In en, this message translates to:
+  /// **'Say what\'s on your mind..'**
+  String get recordingTitleLine1;
+
+  /// No description provided for @recordingTitleLine2.
+  ///
+  /// In en, this message translates to:
+  /// **'We are listening!'**
+  String get recordingTitleLine2;
+
+  /// No description provided for @recordingInProgress.
+  ///
+  /// In en, this message translates to:
+  /// **'Recording in progress...'**
+  String get recordingInProgress;
+
+  /// No description provided for @tapToStopRecording.
+  ///
+  /// In en, this message translates to:
+  /// **'Tap to stop recording'**
+  String get tapToStopRecording;
+
+  /// No description provided for @maxRecordingDuration.
+  ///
+  /// In en, this message translates to:
+  /// **'Max recording duration: {seconds} seconds'**
+  String maxRecordingDuration(Object seconds);
+
+  /// No description provided for @recordingResultTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'This is your recording!'**
+  String get recordingResultTitle;
+
+  /// No description provided for @recordingResultSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Listen to it, or record again if you like'**
+  String get recordingResultSubtitle;
+
+  /// No description provided for @deleteRecording.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete Recording'**
+  String get deleteRecording;
+
+  /// No description provided for @recordAgain.
+  ///
+  /// In en, this message translates to:
+  /// **'Record Again'**
+  String get recordAgain;
+
+  /// No description provided for @findPunchline.
+  ///
+  /// In en, this message translates to:
+  /// **'Let\'s find the punchline!'**
+  String get findPunchline;
+
+  /// No description provided for @processingTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Fankosh is preparing your reply! 🍿'**
+  String get processingTitle;
+
+  /// No description provided for @smartFankoshBadge.
+  ///
+  /// In en, this message translates to:
+  /// **'Smart Fankosh ✨'**
+  String get smartFankoshBadge;
+
+  /// No description provided for @recognizingStatus.
+  ///
+  /// In en, this message translates to:
+  /// **'Recognizing'**
+  String get recognizingStatus;
+
+  /// No description provided for @waitTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Hold on..'**
+  String get waitTitle;
+
+  /// No description provided for @preparingReplySubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Preparing a awesome reply for you! 🎬'**
+  String get preparingReplySubtitle;
+
+  /// No description provided for @searchingForPunchline.
+  ///
+  /// In en, this message translates to:
+  /// **'Searching for the right punchline..'**
+  String get searchingForPunchline;
+
+  /// No description provided for @searchingStatus.
+  ///
+  /// In en, this message translates to:
+  /// **'Searching'**
+  String get searchingStatus;
+
+  /// No description provided for @foundPunchlineTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Yesss! Caught the punchline! 😍'**
+  String get foundPunchlineTitle;
+
+  /// No description provided for @listenToThisSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Wait for it... Listen to this! 😂'**
+  String get listenToThisSubtitle;
+
+  /// No description provided for @takePunchlineHere.
+  ///
+  /// In en, this message translates to:
+  /// **'Take this punchline with you! 🎧'**
+  String get takePunchlineHere;
+
+  /// No description provided for @shareDialogTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Did you like Fankosh\'s reply? 😂'**
+  String get shareDialogTitle;
+
+  /// No description provided for @shareDialogSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Share your voice and Fankosh\'s reply with your friends!'**
+  String get shareDialogSubtitle;
+
+  /// No description provided for @yourVoiceAndFankosh.
+  ///
+  /// In en, this message translates to:
+  /// **'Your voice + Fankosh reply'**
+  String get yourVoiceAndFankosh;
+
+  /// No description provided for @sharePunchline.
+  ///
+  /// In en, this message translates to:
+  /// **'Share Punchline'**
+  String get sharePunchline;
+
+  /// No description provided for @attemptsExhaustedTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Free punchlines are over!'**
+  String get attemptsExhaustedTitle;
+
+  /// No description provided for @attemptsExhaustedSubtitle1.
+  ///
+  /// In en, this message translates to:
+  /// **'But we still have plenty of laughs!'**
+  String get attemptsExhaustedSubtitle1;
+
+  /// No description provided for @attemptsExhaustedSubtitle2.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose your plan and keep going with Fankosh.'**
+  String get attemptsExhaustedSubtitle2;
+
+  /// No description provided for @benefitContinuedLaughs.
+  ///
+  /// In en, this message translates to:
+  /// **'Non-stop Laughs'**
+  String get benefitContinuedLaughs;
+
+  /// No description provided for @benefitMoreAttempts.
+  ///
+  /// In en, this message translates to:
+  /// **'More Attempts'**
+  String get benefitMoreAttempts;
+
+  /// No description provided for @benefitMorePunchlines.
+  ///
+  /// In en, this message translates to:
+  /// **'More Punchlines'**
+  String get benefitMorePunchlines;
+
+  /// No description provided for @explorePlans.
+  ///
+  /// In en, this message translates to:
+  /// **'Explore Plans'**
+  String get explorePlans;
+
   /// No description provided for @fullNameLabel.
   ///
   /// In en, this message translates to:
@@ -769,42 +1015,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Are you sure you want to log out?'**
   String get logoutConfirmation;
-
-  /// No description provided for @errorOccurred.
-  ///
-  /// In en, this message translates to:
-  /// **'Something went wrong. Please try again.'**
-  String get errorOccurred;
-
-  /// No description provided for @checkInternet.
-  ///
-  /// In en, this message translates to:
-  /// **'Please check your internet connection.'**
-  String get checkInternet;
-
-  /// No description provided for @fieldRequired.
-  ///
-  /// In en, this message translates to:
-  /// **'This field is required.'**
-  String get fieldRequired;
-
-  /// No description provided for @invalidEmail.
-  ///
-  /// In en, this message translates to:
-  /// **'Please enter a valid email address.'**
-  String get invalidEmail;
-
-  /// No description provided for @passwordTooShort.
-  ///
-  /// In en, this message translates to:
-  /// **'Password must be at least 8 characters long.'**
-  String get passwordTooShort;
-
-  /// No description provided for @passwordsDoNotMatch.
-  ///
-  /// In en, this message translates to:
-  /// **'Passwords do not match.'**
-  String get passwordsDoNotMatch;
 }
 
 class _AppLocalizationsDelegate

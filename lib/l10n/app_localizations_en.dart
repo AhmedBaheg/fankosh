@@ -220,6 +220,138 @@ class AppLocalizationsEn extends AppLocalizations {
   String get tryFankoshFree => 'Try Fankosh for Free';
 
   @override
+  String attemptsCount(Object count) {
+    return '$count Attempts';
+  }
+
+  @override
+  String get homeBubbleLine1 => 'Say anything... Fankosh';
+
+  @override
+  String get homeBubbleLine2 => 'will reply with a punchline! 😂';
+
+  @override
+  String get tapToRecord => 'Tap to start recording';
+
+  @override
+  String get orUploadAudio => 'Or upload an audio clip';
+
+  @override
+  String get tabPackages => 'Plans';
+
+  @override
+  String get micPermissionTitle => 'We want to hear you';
+
+  @override
+  String get micPermissionSubtitle =>
+      'The app needs microphone permission so you can record the punchline you remember and bring it up in a second.';
+
+  @override
+  String get allowAccess => 'Allow';
+
+  @override
+  String get notNow => 'Not Now';
+
+  @override
+  String get recordingTitleLine1 => 'Say what\'s on your mind..';
+
+  @override
+  String get recordingTitleLine2 => 'We are listening!';
+
+  @override
+  String get recordingInProgress => 'Recording in progress...';
+
+  @override
+  String get tapToStopRecording => 'Tap to stop recording';
+
+  @override
+  String maxRecordingDuration(Object seconds) {
+    return 'Max recording duration: $seconds seconds';
+  }
+
+  @override
+  String get recordingResultTitle => 'This is your recording!';
+
+  @override
+  String get recordingResultSubtitle =>
+      'Listen to it, or record again if you like';
+
+  @override
+  String get deleteRecording => 'Delete Recording';
+
+  @override
+  String get recordAgain => 'Record Again';
+
+  @override
+  String get findPunchline => 'Let\'s find the punchline!';
+
+  @override
+  String get processingTitle => 'Fankosh is preparing your reply! 🍿';
+
+  @override
+  String get smartFankoshBadge => 'Smart Fankosh ✨';
+
+  @override
+  String get recognizingStatus => 'Recognizing';
+
+  @override
+  String get waitTitle => 'Hold on..';
+
+  @override
+  String get preparingReplySubtitle => 'Preparing a awesome reply for you! 🎬';
+
+  @override
+  String get searchingForPunchline => 'Searching for the right punchline..';
+
+  @override
+  String get searchingStatus => 'Searching';
+
+  @override
+  String get foundPunchlineTitle => 'Yesss! Caught the punchline! 😍';
+
+  @override
+  String get listenToThisSubtitle => 'Wait for it... Listen to this! 😂';
+
+  @override
+  String get takePunchlineHere => 'Take this punchline with you! 🎧';
+
+  @override
+  String get shareDialogTitle => 'Did you like Fankosh\'s reply? 😂';
+
+  @override
+  String get shareDialogSubtitle =>
+      'Share your voice and Fankosh\'s reply with your friends!';
+
+  @override
+  String get yourVoiceAndFankosh => 'Your voice + Fankosh reply';
+
+  @override
+  String get sharePunchline => 'Share Punchline';
+
+  @override
+  String get attemptsExhaustedTitle => 'Free punchlines are over!';
+
+  @override
+  String get attemptsExhaustedSubtitle1 =>
+      'But we still have plenty of laughs!';
+
+  @override
+  String get attemptsExhaustedSubtitle2 =>
+      'Choose your plan and keep going with Fankosh.';
+
+  @override
+  String get benefitContinuedLaughs => 'Non-stop Laughs';
+
+  @override
+  String get benefitMoreAttempts => 'More Attempts';
+
+  @override
+  String get benefitMorePunchlines => 'More Punchlines';
+
+  @override
+  String get explorePlans => 'Explore Plans';
+
+  @override
   String get fullNameLabel => 'Full Name';
 
   @override
@@ -356,22 +488,4 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get logoutConfirmation => 'Are you sure you want to log out?';
-
-  @override
-  String get errorOccurred => 'Something went wrong. Please try again.';
-
-  @override
-  String get checkInternet => 'Please check your internet connection.';
-
-  @override
-  String get fieldRequired => 'This field is required.';
-
-  @override
-  String get invalidEmail => 'Please enter a valid email address.';
-
-  @override
-  String get passwordTooShort => 'Password must be at least 8 characters long.';
-
-  @override
-  String get passwordsDoNotMatch => 'Passwords do not match.';
 }
