@@ -359,7 +359,43 @@ abstract final class AppTextStyles {
     height: 14 / 11,
     letterSpacing: 0.0,
   );
+
+  /// Flag emoji style
+  static TextStyle flagEmoji({double fontSize = 20}) => TextStyle(fontSize: fontSize);
+
+  /// Centralized Alexandria builder
+  static TextStyle alexandria({
+    double fontSize = 14,
+    FontWeight fontWeight = FontWeight.normal,
+    Color? color,
+    double? height,
+    double? letterSpacing,
+  }) => GoogleFonts.alexandria(
+    fontSize: fontSize,
+    fontWeight: fontWeight,
+    color: color,
+    height: height,
+    letterSpacing: letterSpacing,
+  );
+
+  /// Centralized Cairo builder
+  static TextStyle cairo({
+    double fontSize = 14,
+    FontWeight fontWeight = FontWeight.normal,
+    Color? color,
+    double? height,
+    double? letterSpacing,
+  }) => GoogleFonts.cairo(
+    fontSize: fontSize,
+    fontWeight: fontWeight,
+    color: color,
+    height: height,
+    letterSpacing: letterSpacing,
+  );
 }
+
+/// Alias for [AppTextStyles] supporting both naming conventions.
+typedef AppStyles = AppTextStyles;
 
 /// Convenience extensions for fluent styling
 extension AppTextStyleExtensions on TextStyle {

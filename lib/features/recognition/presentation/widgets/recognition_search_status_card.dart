@@ -1,9 +1,9 @@
+﻿import 'package:fankosh/core/theme/app_text_styles.dart';
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/utils/assets.dart';
@@ -99,7 +99,7 @@ class _RecognitionSearchStatusCardState
             ),
             boxShadow: const [
               BoxShadow(
-                color: Color(0x0D000000), // 0px 1px 2px 0px #0000000D
+                color: AppColors.shadowSubtleBlack, // 0px 1px 2px 0px #0000000D
                 blurRadius: 2,
                 offset: Offset(0, 1),
               ),
@@ -138,7 +138,7 @@ class _RecognitionSearchStatusCardState
                         SizedBox(width: 4.w),
                         Text(
                           smartBadgeText,
-                          style: GoogleFonts.alexandria(
+                          style: AppStyles.alexandria(
                             fontSize: 11.sp,
                             fontWeight: FontWeight.w600,
                             color: AppColors.primaryExtraDark, // #815600
@@ -150,31 +150,34 @@ class _RecognitionSearchStatusCardState
                   ),
 
                   // "جارٍ التعرف" Status Caption
-                  Text(
-                    recognizingText,
-                    style: GoogleFonts.alexandria(
-                      fontSize: 11.sp,
-                      fontWeight: FontWeight.w500,
-                      color: AppColors.textGrayBrown, // #807660
-                      height: 14 / 11,
+                  Flexible(
+                    child: Text(
+                      recognizingText,
+                      style: AppStyles.alexandria(
+                        fontSize: 11.sp,
+                        fontWeight: FontWeight.w500,
+                        color: AppColors.textGrayBrown, // #807660
+                        height: 14 / 11,
+                      ),
+                      textAlign: TextAlign.right,
+                      overflow: TextOverflow.ellipsis,
                     ),
-                    textAlign: TextAlign.right,
                   ),
                 ],
               ),
               SizedBox(height: 12.h),
 
               // Subtle divider line
-              const Divider(height: 1, thickness: 1, color: Color(0xFFF3ECE1)),
+              const Divider(height: 1, thickness: 1, color: AppColors.borderF3ECE1),
               SizedBox(height: 14.h),
 
               // 2. Headline: "استنى.."
               Text(
                 waitText,
-                style: GoogleFonts.alexandria(
+                style: AppStyles.alexandria(
                   fontSize: 17.sp,
                   fontWeight: FontWeight.w700,
-                  color: const Color(0xFF1B1C1C),
+                  color: AppColors.textHeaderDark,
                   height: 23.38 / 17,
                 ),
                 textAlign: TextAlign.right,
@@ -184,10 +187,10 @@ class _RecognitionSearchStatusCardState
               // 3. Subtitle: "بنحضرلك رد جامد ! 🎬"
               Text(
                 replyText,
-                style: GoogleFonts.alexandria(
+                style: AppStyles.alexandria(
                   fontSize: 16.sp,
                   fontWeight: FontWeight.w400,
-                  color: const Color(0xFF4E4633),
+                  color: AppColors.textSecondary,
                   height: 26 / 16,
                 ),
                 textAlign: TextAlign.right,
@@ -198,12 +201,10 @@ class _RecognitionSearchStatusCardState
               Center(
                 child: Container(
                   width: 220.w,
-                  height: 151.h,
-                  padding: EdgeInsets.only(
-                    top: 20.h,
-                    right: 16.w,
-                    bottom: 20.h,
-                    left: 16.w,
+                  constraints: BoxConstraints(minHeight: 151.h),
+                  padding: EdgeInsets.symmetric(
+                    vertical: 16.h,
+                    horizontal: 16.w,
                   ),
                   decoration: BoxDecoration(
                     color: AppColors.aiSearchingCardBg, // #FFFBF0
@@ -231,7 +232,7 @@ class _RecognitionSearchStatusCardState
                             width: 22.w,
                             height: 22.h,
                             colorFilter: const ColorFilter.mode(
-                              Color(0xFF815600),
+                              AppColors.primaryExtraDark,
                               BlendMode.srcIn,
                             ),
                           ),
@@ -242,10 +243,10 @@ class _RecognitionSearchStatusCardState
                       // "بندور على الإفيه المناسب.."
                       Text(
                         searchingText,
-                        style: GoogleFonts.alexandria(
+                        style: AppStyles.alexandria(
                           fontSize: 15.sp,
                           fontWeight: FontWeight.w600,
-                          color: const Color(0xFF1B1C1C),
+                          color: AppColors.textHeaderDark,
                           height: 22.5 / 15,
                         ),
                         textAlign: TextAlign.center,
@@ -257,11 +258,11 @@ class _RecognitionSearchStatusCardState
                         mainAxisAlignment: MainAxisAlignment.center,
                         textDirection: TextDirection.ltr,
                         children: [
-                          _buildDot(0, const Color(0xFF815600)),
+                          _buildDot(0, AppColors.primaryExtraDark),
                           SizedBox(width: 8.w),
-                          _buildDot(1, const Color(0xFFFFAE00)),
+                          _buildDot(1, AppColors.primaryGold),
                           SizedBox(width: 8.w),
-                          _buildDot(2, const Color(0xFFFFC928)),
+                          _buildDot(2, AppColors.primaryGoldBorder),
                         ],
                       ),
                     ],

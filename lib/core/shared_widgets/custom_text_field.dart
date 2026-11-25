@@ -27,6 +27,16 @@ class CustomTextField extends StatelessWidget {
     this.maxLines = 1,
     this.focusNode,
     this.helperText,
+    this.borderRadius,
+    this.fillColor,
+    this.borderColor,
+    this.labelStyle,
+    this.hintStyle,
+    this.contentPadding,
+    this.textAlign,
+    this.style,
+    this.prefixIconConstraints,
+    this.suffixIconConstraints,
   });
 
   final TextEditingController? controller;
@@ -47,9 +57,23 @@ class CustomTextField extends StatelessWidget {
   final int maxLines;
   final FocusNode? focusNode;
   final String? helperText;
+  final double? borderRadius;
+  final Color? fillColor;
+  final Color? borderColor;
+  final TextStyle? labelStyle;
+  final TextStyle? hintStyle;
+  final TextStyle? style;
+  final EdgeInsetsGeometry? contentPadding;
+  final TextAlign? textAlign;
+  final BoxConstraints? prefixIconConstraints;
+  final BoxConstraints? suffixIconConstraints;
 
   @override
   Widget build(BuildContext context) {
+    final effectiveRadius = borderRadius ?? 14.r;
+    final effectiveBorderColor = borderColor ?? AppColors.border;
+    final effectiveFillColor = fillColor ?? AppColors.surface;
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisSize: MainAxisSize.min,
@@ -57,10 +81,11 @@ class CustomTextField extends StatelessWidget {
         if (label != null) ...[
           Text(
             label!,
-            style: AppTextStyles.subtitleLarge.copyWith(
-              fontWeight: FontWeight.w700,
-              color: AppColors.textPrimary,
-            ),
+            style: labelStyle ??
+                AppTextStyles.subtitleLarge.copyWith(
+                  fontWeight: FontWeight.w700,
+                  color: AppColors.textPrimary,
+                ),
           ),
           SizedBox(height: 8.h),
         ],
@@ -77,28 +102,32 @@ class CustomTextField extends StatelessWidget {
           enabled: enabled,
           readOnly: readOnly,
           maxLines: maxLines,
-          style: AppTextStyles.bodyLarge.copyWith(
-            fontSize: 14.sp,
-            color: AppColors.textPrimary,
-          ),
+          textAlign: textAlign ?? TextAlign.start,
+          style: style ??
+              AppTextStyles.bodyLarge.copyWith(
+                fontSize: 14.sp,
+                color: AppColors.textPrimary,
+              ),
           cursorColor: AppColors.primaryDark,
           decoration: InputDecoration(
             hintText: hintText,
-            hintStyle: AppTextStyles.bodyMedium.copyWith(
-              fontSize: 14.sp,
-              color: AppColors.textDisabled,
-            ),
+            hintStyle: hintStyle ??
+                AppTextStyles.bodyMedium.copyWith(
+                  fontSize: 14.sp,
+                  color: AppColors.textDisabled,
+                ),
             helperText: helperText,
             helperStyle: AppTextStyles.bodySmall.copyWith(
               fontSize: 12.sp,
               color: AppColors.textTertiary,
             ),
-            fillColor: AppColors.surface,
+            fillColor: effectiveFillColor,
             filled: true,
-            contentPadding: EdgeInsets.symmetric(
-              horizontal: 16.w,
-              vertical: 14.h,
-            ),
+            contentPadding: contentPadding ??
+                EdgeInsets.symmetric(
+                  horizontal: 16.w,
+                  vertical: 14.h,
+                ),
             prefixIcon: prefixWidget ??
                 (prefixIcon != null
                     ? Padding(
@@ -111,34 +140,36 @@ class CustomTextField extends StatelessWidget {
                         ),
                       )
                     : null),
-            prefixIconConstraints: BoxConstraints(
-              minWidth: 16.3.w,
-              minHeight: 13.3.h,
-            ),
+            prefixIconConstraints: prefixIconConstraints ??
+                BoxConstraints(
+                  minWidth: 16.3.w,
+                  minHeight: 13.3.h,
+                ),
             suffixIcon: suffixIcon,
+            suffixIconConstraints: suffixIconConstraints,
             enabledBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(14.r),
-              borderSide: const BorderSide(
-                color: AppColors.border,
+              borderRadius: BorderRadius.circular(effectiveRadius),
+              borderSide: BorderSide(
+                color: effectiveBorderColor,
                 width: 1.0,
               ),
             ),
             focusedBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(14.r),
+              borderRadius: BorderRadius.circular(effectiveRadius),
               borderSide: const BorderSide(
                 color: AppColors.primaryDark,
                 width: 1.5,
               ),
             ),
             errorBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(14.r),
+              borderRadius: BorderRadius.circular(effectiveRadius),
               borderSide: const BorderSide(
                 color: AppColors.error,
                 width: 1.0,
               ),
             ),
             focusedErrorBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(14.r),
+              borderRadius: BorderRadius.circular(effectiveRadius),
               borderSide: const BorderSide(
                 color: AppColors.error,
                 width: 1.5,

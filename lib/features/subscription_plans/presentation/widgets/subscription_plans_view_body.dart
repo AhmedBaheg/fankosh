@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../core/models/subscription_plan_model.dart';
 import '../../../../core/routing/routes.dart';
-import '../../data/models/subscription_plan_model.dart';
+import '../../../../core/shared_widgets/subscription_plan_card.dart';
 import 'pay_button.dart';
-import 'subscription_plan_card.dart';
 import 'subscription_plans_header.dart';
 import 'try_free_button.dart';
 

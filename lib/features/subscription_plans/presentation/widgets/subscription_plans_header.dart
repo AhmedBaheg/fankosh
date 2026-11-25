@@ -8,10 +8,7 @@ import '../../../../l10n/app_localizations.dart';
 
 /// Header component for Subscription Plans view (Figma Frame 3).
 class SubscriptionPlansHeader extends StatelessWidget {
-  const SubscriptionPlansHeader({
-    super.key,
-    this.onSkipPressed,
-  });
+  const SubscriptionPlansHeader({super.key, this.onSkipPressed});
 
   final VoidCallback? onSkipPressed;
 

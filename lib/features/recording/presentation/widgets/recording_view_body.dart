@@ -43,7 +43,7 @@ class _RecordingViewBodyState extends State<RecordingViewBody> {
             Navigator.pushReplacementNamed(
               context,
               Routes.recordingResultView,
-              arguments: model.durationSeconds,
+              arguments: model,
             );
           }
         }

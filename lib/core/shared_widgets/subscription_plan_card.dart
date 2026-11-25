@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import '../../../../core/theme/app_colors.dart';
-import '../../../../core/theme/app_text_styles.dart';
-import '../../../../core/utils/assets.dart';
-import '../../../../l10n/app_localizations.dart';
-import '../../data/models/subscription_plan_model.dart';
+import '../models/subscription_plan_model.dart';
+import '../theme/app_colors.dart';
+import '../theme/app_text_styles.dart';
+import '../utils/assets.dart';
+import '../../l10n/app_localizations.dart';
 
 /// Single interactive subscription plan card widget (Figma Frame 3).
 class SubscriptionPlanCard extends StatelessWidget {
@@ -23,13 +23,14 @@ class SubscriptionPlanCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final l10n = AppLocalizations.of(context)!;
+    final l10n = AppLocalizations.of(context);
+    final quotaText = l10n?.quotaFormat(plan.attempts, plan.validityDays) ??
+        '${plan.attempts} محاولة • صالحة لمدة ${plan.validityDays} يوم';
+    final currencyText = l10n?.egpCurrency ?? 'ج.م';
+    final badgeText = plan.badgeTag?.replaceAll('⭐', '').trim() ?? '';
 
     final effectiveBorderColor =
         isSelected ? AppColors.primaryGoldBorder : AppColors.border;
-
-    final quotaText = l10n.quotaFormat(plan.attempts, plan.validityDays);
-    final badgeText = plan.badgeTag?.replaceAll('⭐', '').trim() ?? '';
 
     return Stack(
       children: [
@@ -127,7 +128,7 @@ class SubscriptionPlanCard extends StatelessWidget {
                         ),
                         SizedBox(width: 4.w),
                         Text(
-                          l10n.egpCurrency,
+                          currencyText,
                           style: AppTextStyles.priceCurrency.copyWith(
                             fontSize: 13.sp,
                             fontWeight: FontWeight.w700,

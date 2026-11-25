@@ -16,10 +16,12 @@ class RecognitionResponseViewBody extends StatelessWidget {
     super.key,
     this.recordedDurationSeconds = 5,
     this.responseAudioSeconds = 22,
+    this.audioFilePath,
   });
 
   final int recordedDurationSeconds;
   final int responseAudioSeconds;
+  final String? audioFilePath;
 
   @override
   Widget build(BuildContext context) {
@@ -53,6 +55,7 @@ class RecognitionResponseViewBody extends StatelessWidget {
                 // 3. Compact Audio Preview Card (User's original submission)
                 CompactAudioPreviewCard(
                   durationSeconds: recordedDurationSeconds,
+                  audioFilePath: audioFilePath,
                 ),
                 SizedBox(height: 16.h),
 

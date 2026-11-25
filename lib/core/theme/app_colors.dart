@@ -308,4 +308,256 @@ abstract final class AppColors {
       surfaceWarm,
     ],
   );
+
+  // ==========================================
+  // 9. PROFILE, NOTIFICATIONS & SETTINGS COLORS
+  // ==========================================
+  /// Circular avatar background in user profile (#EAF4FE)
+  static const Color profileAvatarBg = Color(0xFFEAF4FE);
+
+  /// Subtitle muted brown text (#4E4633)
+  static const Color profileTextMutedBrown = Color(0xFF4E4633);
+
+  /// Header dark text (#1B1C1C)
+  static const Color textHeaderDark = Color(0xFF1B1C1C);
+
+  /// Deep dark text (#150E16)
+  static const Color profileTextDeepDark = Color(0xFF150E16);
+
+  /// Secondary description gray (#8D8985)
+  static const Color textSecondaryGray = Color(0xFF8D8985);
+
+  /// Dark navy text for titles (#0B1C30)
+  static const Color textDarkNavy = Color(0xFF0B1C30);
+
+  /// Slate gray for subtitles (#414753)
+  static const Color profileTextSlate = Color(0xFF414753);
+
+  /// Selected option light blue background (#F0F7FF)
+  static const Color selectedItemLightBlue = Color(0xFFF0F7FF);
+
+  /// Notification yellow icon container (#FEF6DF)
+  static const Color notificationYellowBg = Color(0xFFFEF6DF);
+
+  /// Notification blue icon container (#E0F2FE)
+  static const Color notificationBlueBg = Color(0xFFE0F2FE);
+
+  /// Card border / divider (#ECEAE6)
+  static const Color dividerBorder = Color(0xFFECEAE6);
+
+  /// Profile wavy header warm background (#FDF8EB)
+  static const Color profileWaveTop = Color(0xFFFDF8EB);
+
+  // ==========================================
+  // 10. ATTEMPTS, NAVIGATION & MODAL ACCENTS
+  // ==========================================
+  /// Attempts badge top gradient color (#FFF7DC)
+  static const Color attemptsBadgeGradientStart = Color(0xFFFFF7DC);
+
+  /// Attempts badge bottom gradient color (#FFE699)
+  static const Color attemptsBadgeGradientEnd = Color(0xFFFFE699);
+
+  /// Attempts badge gold border (#FCDA82)
+  static const Color attemptsBadgeBorder = Color(0xFFFCDA82);
+
+  /// Benefits icon background tint (#FDC41E2B)
+  static const Color benefitsIconBg = Color(0x2BFDC41E);
+
+  /// Bottom nav bar active glass background (#FFFFFF61)
+  static const Color navBarGlassActive = Color(0x61FFFFFF);
+
+  /// Bottom nav bar inactive glass background (#FFFFFFEB)
+  static const Color navBarGlassInactive = Color(0xEBFFFFFF);
+
+  /// Bottom nav bar subtle border (#F5F5F5)
+  static const Color navBarBorderLight = Color(0xFFF5F5F5);
+
+  /// Discover button vibrant blue (#3998FA)
+  static const Color discoverBlueAccent = Color(0xFF3998FA);
+
+  /// Modal overlay barrier 40% black (#00000066)
+  static const Color modalOverlayBarrier = Color(0x66000000);
+
+  /// Subtle drop shadow tint (#0000000A)
+  static const Color shadowSubtle = Color(0x0A000000);
+
+  /// Active plan badge solid green (#0A9E77)
+  static const Color activeBadgeGreen = Color(0xFF0A9E77);
+
+  /// Active plan badge light mint background (#E8FAF4)
+  static const Color activeBadgeMintBg = Color(0xFFE8FAF4);
+
+  /// Trial step active circle gradient top (#FBBF24)
+  static const Color trialActiveGradientStart = Color(0xFFFBBF24);
+
+  /// Trial step active circle gradient bottom (#FACC15)
+  static const Color trialActiveGradientEnd = Color(0xFFFACC15);
+
+  /// Trial step amber label (#B45309)
+  static const Color trialAmberText = Color(0xFFB45309);
+
+  /// Warning amber orange (#F59E0B)
+  static const Color amberWarning = Color(0xFFF59E0B);
+
+  /// Dark navy charcoal (#1E232A)
+  static const Color textDarkNavyCharcoal = Color(0xFF1E232A);
+
+  /// Gold border tint (#FDE68A)
+  static const Color goldBorderTint = Color(0xFFFDE68A);
+
+  /// Card gold tint fill (#FFFBEB)
+  static const Color cardGoldTintFill = Color(0xFFFFFBEB);
+
+  /// Gold badge background (#FFDF95)
+  static const Color badgeGoldBg = Color(0xFFFFDF95);
+
+  /// Muted warm gray box background (#F6F3F2)
+  static const Color surfaceWarmMuted = Color(0xFFF6F3F2);
+
+  // ==========================================
+  // 11. GENERAL SHADOWS & NEUTRAL SURFACES
+  // ==========================================
+  /// 5% black shadow (0px 1px 2px #0000000D)
+  static const Color shadowSubtleBlack = Color(0x0D000000);
+
+  /// 3% black shadow (0px 2px 8px #00000008)
+  static const Color shadowLight = Color(0x08000000);
+
+  /// 18% black shadow for sheets (0px -8px 30px #0000002E)
+  static const Color shadowSheet = Color(0x2E000000);
+
+  /// Card dark shadow (0x0A190E16)
+  static const Color shadowCardDark = Color(0x0A190E16);
+
+  /// Amber / gold subtle card shadow (0x08251A00)
+  static const Color shadowGold08 = Color(0x08251A00);
+
+  /// Amber / gold elevation shadow (0x0D251A00)
+  static const Color shadowGold0D = Color(0x0D251A00);
+
+  /// Card border with 70% opacity (#E7E5E4B2)
+  static const Color borderLightMuted = Color(0xB2E7E5E4);
+
+  /// Subtle gray surface (#F1EFEF)
+  static const Color surfaceMutedGray = Color(0xFFF1EFEF);
+
+  /// Warm yellow card background (#FFF9E2)
+  static const Color cardYellowTint = Color(0xFFFFF9E2);
+
+  /// Radio button unselected border (#BCBFC6)
+  static const Color radioUnselected = Color(0xFFBCBFC6);
+
+  /// Border light gray (#D1D5DB)
+  static const Color borderLightGray = Color(0xFFD1D5DB);
+
+  /// Green badge text (#0E936C)
+  static const Color badgeGreenDark = Color(0xFF0E936C);
+
+  /// Muted dark gray (#706E6E)
+  static const Color textMutedDarkGray = Color(0xFF706E6E);
+
+  /// Neutral surface (#F6F6F6)
+  static const Color surfaceNeutral = Color(0xFFF6F6F6);
+
+  /// Error light red surface (#FFF0EF)
+  static const Color errorSurfaceLight = Color(0xFFFFF0EF);
+
+  /// Warm light surface (#F5F5F4)
+  static const Color surfaceWarmLight = Color(0xFFF5F5F4);
+
+  /// Neutral light border (#E5E2E1)
+  static const Color borderNeutralLight = Color(0xFFE5E2E1);
+
+  /// Neutral border (#E7E5E4)
+  static const Color borderMuted = Color(0xFFE7E5E4);
+
+  /// Muted warm text (#88847F)
+  static const Color textMutedWarm = Color(0xFF88847F);
+
+  /// Warm gray border (#A8A29E)
+  static const Color borderWarmGray = Color(0xFFA8A29E);
+
+  /// Border (#C7C5C2)
+  static const Color borderC7C5C2 = Color(0xFFC7C5C2);
+
+  /// Surface (#F7F5F5)
+  static const Color surfaceF7F5F5 = Color(0xFFF7F5F5);
+
+  /// Warm muted text (#78716C)
+  static const Color textWarmMuted = Color(0xFF78716C);
+
+  /// Light gold tint (#FFF2C6)
+  static const Color goldLight2 = Color(0xFFFFF2C6);
+
+  /// Light blue tint (#EBF4FF)
+  static const Color blueLight2 = Color(0xFFEBF4FF);
+
+  /// Light gray border (#E5E5E5)
+  static const Color borderE5E5E5 = Color(0xFFE5E5E5);
+
+  /// Error border pink (#FDA29B)
+  static const Color errorBorderPink = Color(0xFFFDA29B);
+
+  /// Gray border (#ECECEC)
+  static const Color borderECECEC = Color(0xFFECECEC);
+
+  /// Nav muted text (#6B6965)
+  static const Color textNavMuted = Color(0xFF6B6965);
+
+  /// Subtle gray surface (#F0EDED)
+  static const Color surfaceF0EDED = Color(0xFFF0EDED);
+
+  /// Border (#F0EBE1)
+  static const Color borderF0EBE1 = Color(0xFFF0EBE1);
+
+  /// Border (#DFDFDF)
+  static const Color borderDFDFDF = Color(0xFFDFDFDF);
+
+  /// Border (#F3ECE1)
+  static const Color borderF3ECE1 = Color(0xFFF3ECE1);
+
+  /// Orange surface tint (#FFF7ED)
+  static const Color orangeSurfaceTint = Color(0xFFFFF7ED);
+
+  /// Surface (#F8F8F8)
+  static const Color surfaceF8F8F8 = Color(0xFFF8F8F8);
+
+  /// Surface (#F8F7F4)
+  static const Color surfaceF8F7F4 = Color(0xFFF8F7F4);
+
+  /// Dark text (#292524)
+  static const Color textDark292524 = Color(0xFF292524);
+
+  /// Surface (#F2EFE9)
+  static const Color surfaceF2EFE9 = Color(0xFFF2EFE9);
+
+  /// Blue surface light (#E8F3FF)
+  static const Color blueSurfaceLight = Color(0xFFE8F3FF);
+
+  /// Error red surface light (#FEF2F2)
+  static const Color errorRedSurfaceLight = Color(0xFFFEF2F2);
+
+  /// Gold dark text (#5C3D00)
+  static const Color goldDark5C3D00 = Color(0xFF5C3D00);
+
+  /// Border gray (#E0E0E0)
+  static const Color borderE0E0E0 = Color(0xFFE0E0E0);
+
+  /// Blurry sheet background (#FCF9F8F2)
+  static const Color surfaceBlurNav = Color(0xF2FCF9F8);
+
+  /// Shadow 20%
+  static const Color shadow20 = Color(0x20000000);
+
+  /// Shadow 5%
+  static const Color shadow05 = Color(0x05000000);
+
+  /// Shadow 40%
+  static const Color shadow40 = Color(0x40000000);
+
+  /// Shadow 12%
+  static const Color shadow1F = Color(0x1F000000);
+
+  /// Shadow 8%
+  static const Color shadow14 = Color(0x14000000);
 }

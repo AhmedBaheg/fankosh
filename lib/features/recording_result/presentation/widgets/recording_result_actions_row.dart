@@ -50,12 +50,15 @@ class RecordingResultActionsRow extends StatelessWidget {
                         height: 16.h,
                       ),
                       SizedBox(width: 8.w),
-                      Text(
-                        l10n.recordAgain,
-                        style: AppTextStyles.buttonSecondary.copyWith(
-                          fontSize: 14.sp,
-                          fontWeight: FontWeight.w600,
-                          color: AppColors.textPrimary,
+                      Flexible(
+                        child: Text(
+                          l10n.recordAgain,
+                          style: AppTextStyles.buttonSecondary.copyWith(
+                            fontSize: 14.sp,
+                            fontWeight: FontWeight.w600,
+                            color: AppColors.textPrimary,
+                          ),
+                          overflow: TextOverflow.ellipsis,
                         ),
                       ),
                     ],
@@ -89,12 +92,15 @@ class RecordingResultActionsRow extends StatelessWidget {
                         height: 15.h,
                       ),
                       SizedBox(width: 8.w),
-                      Text(
-                        l10n.deleteRecording,
-                        style: AppTextStyles.buttonSecondary.copyWith(
-                          fontSize: 14.sp,
-                          fontWeight: FontWeight.w600,
-                          color: AppColors.textSecondary,
+                      Flexible(
+                        child: Text(
+                          l10n.deleteRecording,
+                          style: AppTextStyles.buttonSecondary.copyWith(
+                            fontSize: 14.sp,
+                            fontWeight: FontWeight.w600,
+                            color: AppColors.textSecondary,
+                          ),
+                          overflow: TextOverflow.ellipsis,
                         ),
                       ),
                     ],

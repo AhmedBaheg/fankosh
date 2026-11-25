@@ -19,10 +19,12 @@ class CompactAudioPreviewCard extends StatefulWidget {
   const CompactAudioPreviewCard({
     super.key,
     required this.durationSeconds,
+    this.audioFilePath,
     this.onPlayToggle,
   });
 
   final int durationSeconds;
+  final String? audioFilePath;
   final ValueChanged<bool>? onPlayToggle;
 
   @override
@@ -43,6 +45,7 @@ class _CompactAudioPreviewCardState extends State<CompactAudioPreviewCard> {
     super.initState();
     _controller = AudioPlaybackController(
       totalDurationSeconds: widget.durationSeconds,
+      filePath: widget.audioFilePath,
     )..addListener(_handleControllerUpdate);
   }
 

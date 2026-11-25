@@ -36,6 +36,8 @@ class PrimaryButton extends StatelessWidget {
     this.borderRadius,
     this.hasShadow = true,
     this.textStyle,
+    this.disabledBackgroundColor,
+    this.disabledForegroundColor,
   });
 
   final VoidCallback? onPressed;
@@ -51,6 +53,8 @@ class PrimaryButton extends StatelessWidget {
   final double? borderRadius;
   final bool hasShadow;
   final TextStyle? textStyle;
+  final Color? disabledBackgroundColor;
+  final Color? disabledForegroundColor;
 
   @override
   Widget build(BuildContext context) {
@@ -68,6 +72,16 @@ class PrimaryButton extends StatelessWidget {
     final resolvedTextColor = textColor ??
         (isOutlineBtn ? AppColors.primary : AppColors.textPrimary);
 
+    final resolvedDisabledBgColor = isOutlineBtn
+        ? AppColors.transparent
+        : (disabledBackgroundColor ?? AppColors.primary.withValues(alpha: 0.5));
+
+    final resolvedDisabledTextColor = disabledForegroundColor ??
+        resolvedTextColor.withValues(alpha: 0.5);
+
+    final currentTextColor =
+        isInteractive ? resolvedTextColor : resolvedDisabledTextColor;
+
     final showShadow = hasShadow && !isOutlineBtn && isInteractive;
 
     return SizedBox(
@@ -78,10 +92,8 @@ class PrimaryButton extends StatelessWidget {
         style: ElevatedButton.styleFrom(
           backgroundColor: resolvedBgColor,
           foregroundColor: resolvedTextColor,
-          disabledBackgroundColor: isOutlineBtn
-              ? AppColors.transparent
-              : AppColors.primary.withValues(alpha: 0.5),
-          disabledForegroundColor: resolvedTextColor.withValues(alpha: 0.5),
+          disabledBackgroundColor: resolvedDisabledBgColor,
+          disabledForegroundColor: resolvedDisabledTextColor,
           elevation: showShadow ? 6 : 0,
           shadowColor: (backgroundColor ?? AppColors.primary)
               .withValues(alpha: 0.35),
@@ -113,27 +125,28 @@ class PrimaryButton extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      Text(
-                        text ?? '',
-                        style: textStyle ??
-                            AppTextStyles.buttonLarge.copyWith(
-                              fontSize: 16.sp,
-                              color: resolvedTextColor,
-                            ),
-                      ),
-                      SizedBox(width: 8.w),
                       if (icon != null) ...[
                         SvgPicture.asset(
                           icon!,
                           width: 20.w,
                           height: 20.h,
                           colorFilter: ColorFilter.mode(
-                            resolvedTextColor,
+                            currentTextColor,
                             BlendMode.srcIn,
                           ),
                         ),
                         SizedBox(width: 8.w),
                       ],
+                      Text(
+                        text ?? '',
+                        style: textStyle?.copyWith(color: currentTextColor) ??
+                            AppTextStyles.buttonLarge.copyWith(
+                              fontSize: 16.sp,
+                              color: currentTextColor,
+                            ),
+                      ),
+                      SizedBox(width: 8.w),
+
                       if (hasArrow) ...[
                         SizedBox(width: 8.w),
                         Transform.rotate(
@@ -143,7 +156,7 @@ class PrimaryButton extends StatelessWidget {
                             width: 20.w,
                             height: 20.h,
                             colorFilter: ColorFilter.mode(
-                              resolvedTextColor,
+                              currentTextColor,
                               BlendMode.srcIn,
                             ),
                           ),

@@ -164,7 +164,7 @@ class _CountryPickerBottomSheetState
                         children: [
                           Text(
                             country.flag,
-                            style: TextStyle(fontSize: 22.sp),
+                            style: AppTextStyles.flagEmoji(fontSize: 22.sp),
                           ),
                           SizedBox(width: 12.w),
                           Expanded(

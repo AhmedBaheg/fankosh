@@ -11,6 +11,9 @@ abstract final class AppAssets {
   static const String splashBackground = "assets/images/splach_bg.png";
   static const String splachBg = "assets/images/splach_bg.png";
 
+  /// Profile header background artwork (wavy header curve)
+  static const String profileHeaderBg = "assets/images/profile_header_bg.png";
+
   /// App Logo
   static const String appLogo = "assets/images/logo_app.png";
   static const String logoApp = "assets/images/logo_app.png";
@@ -31,6 +34,13 @@ abstract final class AppAssets {
 
   /// Free attempts exhausted illustration (trials_finished.png)
   static const String trialsFinished = "assets/images/trials_finished.png";
+
+  /// Payment success celebration character illustration
+  static const String paymentSuccessCelebration =
+      "assets/images/payment_success_celebration.png";
+
+  /// 3D User Avatar image (Edit Profile)
+  static const String userAvatar3d = "assets/images/user_avatar_3d.png";
 
   // ==========================================
   // ICONS (SVG) - Audio & Recording (Semantic Names)
@@ -54,7 +64,8 @@ abstract final class AppAssets {
 
   /// Upload audio file icon
   static const String uploadAudioIcon = "assets/icons/upload_audio.svg";
-  static const String documentUploadIcon = "assets/icons/ic_document_upload.svg";
+  static const String documentUploadIcon =
+      "assets/icons/ic_document_upload.svg";
   static const String icUpload = uploadAudioIcon;
 
   /// Active recording indicator icon
@@ -91,7 +102,8 @@ abstract final class AppAssets {
   static const String icBundles = "assets/icons/ic_bundles.svg";
   static const String plansActiveIcon = "assets/icons/ic_bundles.svg";
   static const String plansInactiveIcon = "assets/icons/ic_bundles.svg";
-  static const String attemptsLightningIcon = "assets/icons/ic_benefit_lightning.svg";
+  static const String attemptsLightningIcon =
+      "assets/icons/ic_benefit_lightning.svg";
 
   /// Chevron down arrow
   static const String chevronDownIcon = "assets/icons/ic_chevron_down.svg";
@@ -123,7 +135,8 @@ abstract final class AppAssets {
   /// Notification bell icon
   static const String notificationIcon = "assets/icons/ic_notification.svg";
   static const String icNotification = "assets/icons/ic_notification.svg";
-  static const String notificationActiveIcon = "assets/icons/ic_notification.svg";
+  static const String notificationActiveIcon =
+      "assets/icons/ic_notification.svg";
 
   /// User profile circle icon
   static const String userCircleIcon = "assets/icons/ic_profile.svg";
@@ -134,7 +147,7 @@ abstract final class AppAssets {
   /// Star icon
   static const String starIcon = "assets/icons/ic_star.svg";
   static const String icStar = "assets/icons/ic_star.svg";
-  static const String checkCircleIcon = "assets/icons/ic_star.svg";
+  static const String checkCircleIcon = "assets/icons/ic_check_circle.svg";
 
   /// Trails icon
   static const String icTrails = "assets/icons/ic_trails.svg";
@@ -156,6 +169,93 @@ abstract final class AppAssets {
   static const String shareBadgeIcon = "assets/icons/ic_share_badge.svg";
   static const String shareNodesIcon = "assets/icons/ic_share_nodes.svg";
   static const String benefitLaughIcon = "assets/icons/ic_benefit_laugh.svg";
-  static const String benefitLightningIcon = "assets/icons/ic_benefit_lightning.svg";
-  static const String benefitClapperIcon = "assets/icons/ic_benefit_clapper.svg";
+  static const String benefitLightningIcon =
+      "assets/icons/ic_benefit_lightning.svg";
+  static const String benefitClapperIcon =
+      "assets/icons/ic_benefit_clapper.svg";
+  static const String infoIcon = "assets/icons/ic_info.svg";
+  static const String crownIcon = "assets/icons/ic_crown.svg";
+  static const String ticketIcon = "assets/icons/ic_ticket.svg";
+  static const String calendarIcon = "assets/icons/ic_calendar.svg";
+  static const String receiptIcon = "assets/icons/ic_receipt.svg";
+
+  /// Payment feature icons
+  static const String bankCardIcon = "assets/icons/ic_bank_card.svg";
+  static const String visaCardIcon = "assets/icons/ic_visa.svg";
+  static const String walletIcon = "assets/icons/ic_wallet.svg";
+  static const String chevronRightIcon = "assets/icons/ic_chevron_right.svg";
+  static const String shieldCheckIcon = "assets/icons/ic_shield_check.svg";
+  static const String vodafoneCashIcon = "assets/icons/ic_vodafone_cash.svg";
+  static const String etisalatCashIcon = "assets/icons/ic_etisalat_cash.svg";
+  static const String orangeCashIcon = "assets/icons/ic_orange_cash.svg";
+  static const String mobilePhoneIcon = "assets/icons/ic_mobile.svg";
+  static const String walletNotifiIcon = "assets/icons/ic_wallet_notifi.svg";
+  static const String checkMarkIcon = "assets/icons/ic_check_mark.svg";
+
+  /// Remaining attempts bottom sheet icons
+  static const String glowingLightningBadgeIcon =
+      "assets/icons/ic_glowing_lightning_badge.svg";
+  static const String chevronLeftBlueIcon =
+      "assets/icons/ic_chevron_left_blue.svg";
+
+  /// My Bundle (باقتي) feature icons
+  static const String lightbulbUpgradeIcon =
+      "assets/icons/ic_lightbulb_upgrade.svg";
+  static const String planDetailsIcon =
+      "assets/icons/ic_plan_details.svg";
+  static const String paidReceiptIcon =
+      "assets/icons/ic_paid_receipt.svg";
+  static const String planMedalIcon =
+      "assets/icons/ic_plan_medal.svg";
+  static const String renewPlanIcon =
+      "assets/icons/ic_renew_plan.svg";
+  static const String hourglassIcon =
+      "assets/icons/ic_hourglass.svg";
+  static const String informationIcon =
+      "assets/icons/Ic_information.svg";
+
+  // ==========================================
+  // ICONS (SVG) - Profile (حسابي) Feature
+  // ==========================================
+  /// Profile avatar SVG (Container.svg)
+  static const String profileAvatarIcon =
+      "assets/icons/ic_profile_avatar.svg";
+
+  /// Profile edit pencil SVG (Container (1).svg)
+  static const String editPencilIcon =
+      "assets/icons/ic_edit_pencil.svg";
+
+  /// Birthday cake SVG (Icon.svg)
+  static const String birthdayCakeIcon =
+      "assets/icons/ic_birthday_cake.svg";
+
+  /// Country globe SVG (Container (2).svg)
+  static const String countryGlobeIcon =
+      "assets/icons/ic_country_globe.svg";
+
+  /// Privacy and security shield SVG (Container (3).svg)
+  static const String privacyShieldIcon =
+      "assets/icons/ic_privacy_shield.svg";
+
+  /// Support headset SVG (Container (4).svg)
+  static const String supportHeadsetIcon =
+      "assets/icons/ic_support_headset.svg";
+
+  /// Logout action SVG (Container (5).svg)
+  static const String logoutIcon =
+      "assets/icons/ic_logout.svg";
+
+  /// Double checkmark SVG (Container.svg)
+  static const String doubleCheckIcon =
+      "assets/icons/ic_double_check.svg";
+
+  /// Camera icon in white (Icon.svg)
+  static const String cameraWhiteIcon =
+      "assets/icons/ic_camera_white.svg";
+
+  /// Shield checkmark icon in green (Container.svg)
+  static const String shieldCheckGreenIcon =
+      "assets/icons/ic_shield_check_green.svg";
+  static const String markReadIcon =
+      "assets/icons/ic_mark_read.svg";
 }

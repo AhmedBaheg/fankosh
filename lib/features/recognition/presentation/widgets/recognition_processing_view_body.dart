@@ -18,11 +18,13 @@ class RecognitionProcessingViewBody extends StatefulWidget {
   const RecognitionProcessingViewBody({
     super.key,
     this.recordedDurationSeconds = 5,
+    this.audioFilePath,
     this.onRecognitionSuccess,
     this.onRecognitionFailed,
   });
 
   final int recordedDurationSeconds;
+  final String? audioFilePath;
   final VoidCallback? onRecognitionSuccess;
   final ValueChanged<String>? onRecognitionFailed;
 
@@ -86,6 +88,7 @@ class _RecognitionProcessingViewBodyState
                     // 3. Compact Audio Preview Card (Displays User's actual recording duration)
                     CompactAudioPreviewCard(
                       durationSeconds: widget.recordedDurationSeconds,
+                      audioFilePath: widget.audioFilePath,
                     ),
                     SizedBox(height: 20.h),
 

@@ -1,4 +1,6 @@
 import 'dart:async';
+import 'dart:io';
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/foundation.dart';
 
 /// Helper utility for audio duration formatting and playback calculations.
@@ -23,25 +25,49 @@ abstract final class AudioHelper {
   }
 }
 
-/// Lightweight controller for audio playback simulation and state tracking.
-///
-/// Separates audio playback business logic, timer handling, and progress
-/// calculations from presentation widgets.
+/// Dynamic controller for audio playback supporting actual audio file playback,
+/// position tracking, pause/resume, and graceful fallback.
 class AudioPlaybackController extends ChangeNotifier {
   AudioPlaybackController({
     required int totalDurationSeconds,
+    this.filePath,
     int initialPositionSeconds = 0,
   })  : _totalDuration = totalDurationSeconds > 0 ? totalDurationSeconds : 1,
-        _currentPosition = initialPositionSeconds;
+        _currentPosition = initialPositionSeconds {
+    _initPlayer();
+  }
 
+  final String? filePath;
   int _totalDuration;
   int _currentPosition;
   bool _isPlaying = false;
-  Timer? _timer;
+  AudioPlayer? _player;
+  StreamSubscription<Duration>? _posSub;
+  StreamSubscription<void>? _completeSub;
+  Timer? _fallbackTimer;
 
   int get totalDuration => _totalDuration;
   int get currentPosition => _currentPosition;
   bool get isPlaying => _isPlaying;
+
+  void _initPlayer() {
+    if (filePath != null && filePath!.isNotEmpty) {
+      _player = AudioPlayer();
+      _posSub = _player!.onPositionChanged.listen((pos) {
+        final sec = pos.inSeconds;
+        if (sec != _currentPosition && sec <= _totalDuration) {
+          _currentPosition = sec;
+          notifyListeners();
+        }
+      });
+      _completeSub = _player!.onPlayerComplete.listen((_) {
+        _isPlaying = false;
+        _currentPosition = 0;
+        _fallbackTimer?.cancel();
+        notifyListeners();
+      });
+    }
+  }
 
   /// Updates the total duration if the parent widget passes a new duration.
   void updateTotalDuration(int newTotal) {
@@ -61,8 +87,8 @@ class AudioPlaybackController extends ChangeNotifier {
     }
   }
 
-  /// Starts playback from current position or restarts if at the end.
-  void play() {
+  /// Starts or resumes playback of the recorded audio file.
+  Future<void> play() async {
     if (_currentPosition >= _totalDuration) {
       _currentPosition = 0;
     }
@@ -70,8 +96,26 @@ class AudioPlaybackController extends ChangeNotifier {
     _isPlaying = true;
     notifyListeners();
 
-    _timer?.cancel();
-    _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
+    if (_player != null && filePath != null && File(filePath!).existsSync()) {
+      try {
+        if (_currentPosition > 0) {
+          await _player!.seek(Duration(seconds: _currentPosition));
+          await _player!.resume();
+        } else {
+          await _player!.play(DeviceFileSource(filePath!));
+        }
+      } catch (e) {
+        debugPrint('Audio playback error: $e');
+        _startFallbackTimer();
+      }
+    } else {
+      _startFallbackTimer();
+    }
+  }
+
+  void _startFallbackTimer() {
+    _fallbackTimer?.cancel();
+    _fallbackTimer = Timer.periodic(const Duration(seconds: 1), (timer) {
       if (_currentPosition < _totalDuration) {
         _currentPosition++;
         notifyListeners();
@@ -83,25 +127,42 @@ class AudioPlaybackController extends ChangeNotifier {
   }
 
   /// Pauses playback and retains current position.
-  void pause() {
-    _timer?.cancel();
+  Future<void> pause() async {
+    _fallbackTimer?.cancel();
     _isPlaying = false;
     notifyListeners();
+    if (_player != null) {
+      try {
+        await _player!.pause();
+      } catch (e) {
+        debugPrint('Pause error: $e');
+      }
+    }
   }
 
   /// Stops playback with optional position reset.
-  void stop({bool reset = false}) {
-    _timer?.cancel();
+  Future<void> stop({bool reset = false}) async {
+    _fallbackTimer?.cancel();
     _isPlaying = false;
     if (reset) {
       _currentPosition = 0;
     }
     notifyListeners();
+    if (_player != null) {
+      try {
+        await _player!.stop();
+      } catch (e) {
+        debugPrint('Stop error: $e');
+      }
+    }
   }
 
   @override
   void dispose() {
-    _timer?.cancel();
+    _fallbackTimer?.cancel();
+    _posSub?.cancel();
+    _completeSub?.cancel();
+    _player?.dispose();
     super.dispose();
   }
 }

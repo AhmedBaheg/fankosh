@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../core/theme/app_colors.dart';
+import '../../../recording/data/models/recorded_audio_model.dart';
 import '../widgets/recognition_processing_view_body.dart';
 
 /// Screen view for Recognition Chat Screen (Figma Page 8, 9 & 10).
@@ -10,14 +11,18 @@ class RecognitionProcessingView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final recordedSeconds =
-        (ModalRoute.of(context)?.settings.arguments as int?) ?? 5;
+    final args = ModalRoute.of(context)?.settings.arguments;
+    final RecordedAudioModel? model = args is RecordedAudioModel ? args : null;
+    final int recordedSeconds =
+        model?.durationSeconds ?? (args is int ? args : 5);
+    final String? audioPath = model?.filePath;
 
     return Scaffold(
       backgroundColor: AppColors.background,
       body: SafeArea(
         child: RecognitionProcessingViewBody(
           recordedDurationSeconds: recordedSeconds,
+          audioFilePath: audioPath,
         ),
       ),
     );

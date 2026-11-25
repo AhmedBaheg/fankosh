@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../recording/data/models/recorded_audio_model.dart';
 import '../../../../core/routing/routes.dart';
 import '../../../../core/shared_widgets/app_header_bar.dart';
 import '../../../../core/shared_widgets/primary_button.dart';
@@ -17,12 +18,16 @@ class RecordingResultViewBody extends StatelessWidget {
   const RecordingResultViewBody({
     super.key,
     required this.recordedDurationSeconds,
+    this.audioFilePath,
+    this.recordedAudioModel,
     this.onDeletePressed,
     this.onRecordAgainPressed,
     this.onFindPunchlinePressed,
   });
 
   final int recordedDurationSeconds;
+  final String? audioFilePath;
+  final RecordedAudioModel? recordedAudioModel;
   final VoidCallback? onDeletePressed;
   final VoidCallback? onRecordAgainPressed;
   final VoidCallback? onFindPunchlinePressed;
@@ -73,6 +78,7 @@ class RecordingResultViewBody extends StatelessWidget {
                 // 4. White Audio Player Card (Dynamic Waveform + Recorded Voice Duration + Play Button)
                 AudioPlayerCard(
                   totalDurationSeconds: recordedDurationSeconds,
+                  audioFilePath: audioFilePath,
                   initialPositionSeconds: 0,
                 ),
                 SizedBox(height: 24.h),
@@ -113,7 +119,7 @@ class RecordingResultViewBody extends StatelessWidget {
                     Navigator.pushNamed(
                       context,
                       Routes.recognitionProcessingView,
-                      arguments: recordedDurationSeconds,
+                      arguments: recordedAudioModel ?? recordedDurationSeconds,
                     );
                   },
             ),

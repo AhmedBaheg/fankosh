@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import '../routing/routes.dart';
 import '../utils/assets.dart';
 
 /// Centralized shared app top bar header widget used across views (Figma Frame 4).
@@ -24,7 +25,10 @@ class AppHeaderBar extends StatelessWidget {
         children: [
           // 1. Right side in RTL: User Profile Circle Icon
           InkWell(
-            onTap: onProfilePressed ?? () {},
+            onTap: onProfilePressed ??
+                () {
+                  Navigator.pushNamed(context, Routes.profileView);
+                },
             borderRadius: BorderRadius.circular(12.r),
             child: Padding(
               padding: EdgeInsets.all(4.r),
@@ -46,7 +50,10 @@ class AppHeaderBar extends StatelessWidget {
 
           // 3. Left side in RTL: Notification Bell Action Icon
           InkWell(
-            onTap: onNotificationPressed ?? () {},
+            onTap: onNotificationPressed ??
+                () {
+                  Navigator.pushNamed(context, Routes.notificationsView);
+                },
             borderRadius: BorderRadius.circular(12.r),
             child: Padding(
               padding: EdgeInsets.all(4.r),

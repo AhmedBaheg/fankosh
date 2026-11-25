@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../recording/data/models/recorded_audio_model.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../widgets/recording_result_view_body.dart';
 
@@ -9,14 +10,19 @@ class RecordingResultView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final recordedSeconds =
-        (ModalRoute.of(context)?.settings.arguments as int?) ?? 5;
+    final args = ModalRoute.of(context)?.settings.arguments;
+    final RecordedAudioModel? model = args is RecordedAudioModel ? args : null;
+    final int recordedSeconds =
+        model?.durationSeconds ?? (args is int ? args : 5);
+    final String? audioPath = model?.filePath;
 
     return Scaffold(
       backgroundColor: AppColors.background,
       body: SafeArea(
         child: RecordingResultViewBody(
           recordedDurationSeconds: recordedSeconds,
+          audioFilePath: audioPath,
+          recordedAudioModel: model,
         ),
       ),
     );

@@ -1,7 +1,7 @@
+﻿import 'package:fankosh/core/theme/app_text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/utils/assets.dart';
@@ -46,7 +46,7 @@ class AiResponseMessageCard extends StatelessWidget {
             ),
             boxShadow: const [
               BoxShadow(
-                color: Color(0x0D000000), // 0px 1px 2px 0px #0000000D
+                color: AppColors.shadowSubtleBlack, // 0px 1px 2px 0px #0000000D
                 blurRadius: 2,
                 offset: Offset(0, 1),
               ),
@@ -65,7 +65,7 @@ class AiResponseMessageCard extends StatelessWidget {
                     vertical: 4.h,
                   ),
                   decoration: BoxDecoration(
-                    color: const Color(0xFFFFF2C6), // Soft gold pill #FFF2C6
+                    color: AppColors.goldLight2, // Soft gold pill #FFF2C6
                     borderRadius: BorderRadius.circular(20.r),
                   ),
                   child: Row(
@@ -76,17 +76,17 @@ class AiResponseMessageCard extends StatelessWidget {
                         width: 12.w,
                         height: 12.h,
                         colorFilter: const ColorFilter.mode(
-                          Color(0xFF815600),
+                          AppColors.primaryExtraDark,
                           BlendMode.srcIn,
                         ),
                       ),
                       SizedBox(width: 4.w),
                       Text(
                         smartBadgeText,
-                        style: GoogleFonts.alexandria(
+                        style: AppStyles.alexandria(
                           fontSize: 11.sp,
                           fontWeight: FontWeight.w600,
-                          color: const Color(0xFF815600),
+                          color: AppColors.primaryExtraDark,
                           height: 14 / 11,
                         ),
                       ),
@@ -99,10 +99,10 @@ class AiResponseMessageCard extends StatelessWidget {
               // Headline ("أيووووه! قفشت الإفيه! 😍")
               Text(
                 headlineText,
-                style: GoogleFonts.alexandria(
+                style: AppStyles.alexandria(
                   fontSize: 17.sp,
                   fontWeight: FontWeight.w700,
-                  color: const Color(0xFF1B1C1C),
+                  color: AppColors.textHeaderDark,
                   height: 24 / 17,
                 ),
                 textAlign: TextAlign.right,
@@ -112,10 +112,10 @@ class AiResponseMessageCard extends StatelessWidget {
               // Subtitle ("استنى بقى... اسمع دي! 😂")
               Text(
                 subtitleText,
-                style: GoogleFonts.alexandria(
+                style: AppStyles.alexandria(
                   fontSize: 14.sp,
                   fontWeight: FontWeight.w400,
-                  color: const Color(0xFF4E4633),
+                  color: AppColors.textSecondary,
                   height: 22 / 14,
                 ),
                 textAlign: TextAlign.right,

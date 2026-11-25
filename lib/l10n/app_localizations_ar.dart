@@ -236,7 +236,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get orUploadAudio => 'أو ارفع مقطع صوتي';
 
   @override
-  String get tabPackages => 'الباقات';
+  String get tabPackages => 'باقتي';
 
   @override
   String get micPermissionTitle => 'عايزين نسمعك';
@@ -483,4 +483,149 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get logoutConfirmation => 'هل أنت متأكد من رغبتك في تسجيل الخروج؟';
+
+  @override
+  String get profileHeaderSubtitle => 'كل حاجة تخص حسابك في مكان واحد';
+
+  @override
+  String get edit => 'تعديل';
+
+  @override
+  String get mySubscriptionPrefix => 'اشتراكي:';
+
+  @override
+  String get viewMyPlan => 'عرض باقتي';
+
+  @override
+  String get attemptsRemainingThisMonth => 'محاولة متبقية هذا الشهر';
+
+  @override
+  String get settingsSectionTitle => 'الإعدادات';
+
+  @override
+  String get birthDateTitle => 'تاريخ الميلاد';
+
+  @override
+  String get addBirthDateSubtitle => 'أضف تاريخ ميلادك';
+
+  @override
+  String get notificationsSubtitle => 'التحكم في إشعارات فانكوش';
+
+  @override
+  String get countryTitle => 'الدولة';
+
+  @override
+  String get arabic => 'العربية';
+
+  @override
+  String get english => 'الإنجليزية';
+
+  @override
+  String get privacyAndSecurityTitle => 'الخصوصية والأمان';
+
+  @override
+  String get privacyAndSecuritySubtitle => 'إعدادات الأمان والخصوصية';
+
+  @override
+  String get helpAndSupportSubtitle => 'محتاج مساعدة؟ إحنا هنا';
+
+  @override
+  String get aboutFankoshTitle => 'عن فانكوش';
+
+  @override
+  String get aboutFankoshSubtitle => 'معلومات التطبيق والإصدار 1.4';
+
+  @override
+  String get chooseCountryTitle => 'اختار دولتك 🌍';
+
+  @override
+  String get chooseCountrySubtitle => 'اختار البلد اللي بتستخدم منها فانكوش.';
+
+  @override
+  String get searchCountryHint => 'ابحث عن دولة...';
+
+  @override
+  String get saveChanges => 'حفظ التغييرات';
+
+  @override
+  String get chooseLanguageTitle => 'اختر اللغة';
+
+  @override
+  String get chooseLanguageSubtitle => 'اختر لغة عرض التطبيق.';
+
+  @override
+  String get markAllAsRead => 'تحديد الكل كمقروء';
+
+  @override
+  String get planActivatedTitle => 'باقتك اتفعّلت! 🎉';
+
+  @override
+  String get planActivatedSubtitle => 'اشتراكك جاهز... يلا نكمّل قفشات!';
+
+  @override
+  String get attemptsRunningLowTitle => 'محاولاتك قربت تخلص!';
+
+  @override
+  String get attemptsRunningLowSubtitle => 'فاضلك محاولتين بس!';
+
+  @override
+  String get tapToChangePhoto => 'انقر لتغيير صورتك';
+
+  @override
+  String get birthDatePrivacyNote =>
+      'هنستخدم تاريخ ميلادك بس عشان نهنّيك في يومك المميز.';
+
+  @override
+  String get planDetailsTitle => 'تفاصيل الباقة';
+
+  @override
+  String get planDetailsSubtitle => 'كل حاجة عن اشتراكك الحالي';
+
+  @override
+  String get attemptsBalanceTitle => 'رصيد محاولاتك';
+
+  @override
+  String get attemptsRemainingOutOf => 'محاولة متبقية من';
+
+  @override
+  String get useAttemptsBeforeExpiry => 'استخدم محاولاتك قبل انتهاء الباقة.';
+
+  @override
+  String get activationDateTitle => 'تاريخ التفعيل';
+
+  @override
+  String get expiryDateTitle => 'تاريخ الانتهاء';
+
+  @override
+  String get planDurationTitle => 'مدة الباقة';
+
+  @override
+  String get paidAmountTitle => 'المبلغ المدفوع';
+
+  @override
+  String get renewOrChangePlan => 'تجديد أو تغيير الباقة';
+
+  @override
+  String get activeBadge => 'نشطة';
+
+  @override
+  String get chooseYourPlanTitle => 'اختار باقتك';
+
+  @override
+  String get chooseYourPlanSubtitle => 'كمّل قفشاتك مع الباقة اللي تناسبك';
+
+  @override
+  String get currentPlanBadge => 'باقتك الحالية';
+
+  @override
+  String get expiresOnPrefix => 'تنتهي';
+
+  @override
+  String get availablePlansTitle => 'الباقات المتاحة';
+
+  @override
+  String get monthly => 'شهرياً';
+
+  @override
+  String get secureEncryptedPaymentNote => 'دفع إلكتروني آمن ومشفر 100%';
 }

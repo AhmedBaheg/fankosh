@@ -1,10 +1,13 @@
 import 'dart:io';
 
+import 'package:fankosh/core/routing/app_router.dart';
+import 'package:fankosh/core/routing/routes.dart';
 import 'package:fankosh/core/utils/assets.dart';
 import 'package:fankosh/core/utils/audio_helper.dart';
 import 'package:fankosh/features/recognition/logic/recognition_controller.dart';
 import 'package:fankosh/features/recognition/presentation/widgets/compact_audio_preview_card.dart';
 import 'package:fankosh/features/recognition/presentation/widgets/recognition_processing_view_body.dart';
+import 'package:fankosh/features/recording/data/models/recorded_audio_model.dart';
 import 'package:fankosh/features/recording/logic/recording_controller.dart';
 import 'package:fankosh/features/recording/presentation/widgets/recording_view_body.dart';
 import 'package:fankosh/features/recording/presentation/widgets/stop_recording_button.dart';
@@ -122,12 +125,12 @@ void main() {
       controller.dispose();
     });
 
-    test('AudioRecordingController enforces 5-second maximum', () {
+    test('AudioRecordingController enforces 5-second maximum', () async {
       final controller = AudioRecordingController(maxDurationSeconds: 5);
-      controller.startRecording();
+      await controller.startRecording();
       expect(controller.isRecording, isTrue);
 
-      final model = controller.stopRecording(autoStopped: true);
+      final model = await controller.stopRecording(autoStopped: true);
       expect(model?.durationSeconds, equals(5));
       expect(controller.isRecording, isFalse);
       controller.dispose();
@@ -218,6 +221,32 @@ void main() {
   });
 
   group('4. Audio Preview & Playback Tests', () {
+    testWidgets('AudioPlayerCard displays actual recorded duration 00:01', (tester) async {
+      await tester.pumpWidget(_createTestWidget(
+        const AudioPlayerCard(
+          totalDurationSeconds: 1,
+          initialPositionSeconds: 0,
+        ),
+      ));
+
+      expect(find.text('00:01'), findsOneWidget);
+      expect(find.text('00:00'), findsOneWidget);
+      expect(find.text('00:05'), findsNothing);
+    });
+
+    testWidgets('AudioPlayerCard displays actual recorded duration 00:02', (tester) async {
+      await tester.pumpWidget(_createTestWidget(
+        const AudioPlayerCard(
+          totalDurationSeconds: 2,
+          initialPositionSeconds: 0,
+        ),
+      ));
+
+      expect(find.text('00:02'), findsOneWidget);
+      expect(find.text('00:00'), findsOneWidget);
+      expect(find.text('00:05'), findsNothing);
+    });
+
     testWidgets('AudioPlayerCard displays actual recorded duration 00:03', (tester) async {
       await tester.pumpWidget(_createTestWidget(
         const AudioPlayerCard(
@@ -300,6 +329,13 @@ void main() {
 
   group('5. Recognition Lifecycle & Navigation Tests', () {
     testWidgets('Recognition screen remains open while processing without auto-popping', (tester) async {
+      tester.view.physicalSize = const Size(375, 812);
+      tester.view.devicePixelRatio = 1.0;
+      addTearDown(() {
+        tester.view.resetPhysicalSize();
+        tester.view.resetDevicePixelRatio();
+      });
+
       await tester.pumpWidget(_createTestWidget(
         const RecognitionProcessingViewBody(
           recordedDurationSeconds: 4,
@@ -319,6 +355,51 @@ void main() {
 
       // Successfully updates in place with recognized response
       expect(find.byType(RecognitionProcessingViewBody), findsOneWidget);
+    });
+
+    testWidgets('RecordingResultView receives RecordedAudioModel via AppRouter and displays dynamic duration', (tester) async {
+      tester.view.physicalSize = const Size(375, 812);
+      tester.view.devicePixelRatio = 1.0;
+      addTearDown(() {
+        tester.view.resetPhysicalSize();
+        tester.view.resetDevicePixelRatio();
+      });
+
+      await tester.pumpWidget(ScreenUtilInit(
+        designSize: const Size(375, 812),
+        minTextAdapt: true,
+        builder: (context, _) => MaterialApp(
+          localizationsDelegates: const [
+            AppLocalizations.delegate,
+            GlobalMaterialLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate,
+          ],
+          supportedLocales: const [
+            Locale('ar'),
+            Locale('en'),
+          ],
+          locale: const Locale('ar'),
+          onGenerateRoute: AppRouter.generateRoute,
+          initialRoute: Routes.recordingResultView,
+          onGenerateInitialRoutes: (initialRoute) {
+            return [
+              AppRouter.generateRoute(RouteSettings(
+                name: Routes.recordingResultView,
+                arguments: RecordedAudioModel(
+                  id: 'rec_dynamic_test',
+                  durationSeconds: 2,
+                  recordedAt: DateTime.now(),
+                ),
+              ))!,
+            ];
+          },
+        ),
+      ));
+
+      await tester.pumpAndSettle();
+      expect(find.text('00:02'), findsOneWidget);
+      expect(find.text('00:05'), findsNothing);
     });
   });
 }

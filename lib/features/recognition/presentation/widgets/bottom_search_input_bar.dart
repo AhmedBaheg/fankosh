@@ -1,7 +1,7 @@
+import 'package:fankosh/core/theme/app_text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/utils/assets.dart';
@@ -50,10 +50,10 @@ class BottomSearchInputBar extends StatelessWidget {
               child: Center(
                 child: Text(
                   searchingText,
-                  style: GoogleFonts.alexandria(
+                  style: AppStyles.alexandria(
                     fontSize: 11.sp,
                     fontWeight: FontWeight.w500,
-                    color: const Color(0xFFFDFBF4),
+                    color: AppColors.background,
                     height: 16.5 / 11,
                   ),
                   textAlign: TextAlign.center,
@@ -73,12 +73,12 @@ class BottomSearchInputBar extends StatelessWidget {
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(9999),
                 border: Border.all(
-                  color: const Color(0xFFF2EFE9),
+                  color: AppColors.surfaceF2EFE9,
                   width: 1.0,
                 ),
                 boxShadow: const [
                   BoxShadow(
-                    color: Color(0x1F000000), // 0px 8px 24px -4px #0000001F
+                    color: AppColors.shadow1F, // 0px 8px 24px -4px #0000001F
                     blurRadius: 24,
                     spreadRadius: -4,
                     offset: Offset(0, 8),
@@ -99,7 +99,7 @@ class BottomSearchInputBar extends StatelessWidget {
                         borderRadius: BorderRadius.circular(9999),
                         boxShadow: const [
                           BoxShadow(
-                            color: Color(0x0D000000), // 0px 1px 2px 0px #0000000D
+                            color: AppColors.shadowSubtleBlack, // 0px 1px 2px 0px #0000000D
                             blurRadius: 2,
                             offset: Offset(0, 1),
                           ),
@@ -111,7 +111,7 @@ class BottomSearchInputBar extends StatelessWidget {
                           width: 16.w,
                           height: 18.h,
                           colorFilter: const ColorFilter.mode(
-                            Color(0xFF4E4633),
+                            AppColors.textSecondary,
                             BlendMode.srcIn,
                           ),
                         ),
@@ -126,10 +126,10 @@ class BottomSearchInputBar extends StatelessWidget {
                       placeholderText.contains('...')
                           ? placeholderText
                           : '$placeholderText...',
-                      style: GoogleFonts.alexandria(
+                      style: AppStyles.alexandria(
                         fontSize: 12.sp,
                         fontWeight: FontWeight.w400,
-                        color: const Color(0xCC807660), // #807660CC
+                        color: AppColors.textGrayBrown.withValues(alpha: 0.8), // #807660CC
                         height: 22 / 12,
                       ),
                       textAlign: TextAlign.right,
@@ -152,7 +152,7 @@ class BottomSearchInputBar extends StatelessWidget {
                           width: 18.w,
                           height: 22.h,
                           colorFilter: const ColorFilter.mode(
-                            Color(0xFF8D8985),
+                            AppColors.textMuted,
                             BlendMode.srcIn,
                           ),
                         ),

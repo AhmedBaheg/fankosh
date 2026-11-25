@@ -1,8 +1,9 @@
+﻿import 'package:fankosh/core/theme/app_text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:google_fonts/google_fonts.dart';
 
+import '../../../../core/theme/app_colors.dart';
 import '../../../../core/utils/assets.dart';
 import '../../../../l10n/app_localizations.dart';
 
@@ -12,7 +13,7 @@ import '../../../../l10n/app_localizations.dart';
 ///   1. Right: "قفشات أكتر" with clapperboard icon
 ///   2. Middle: "محاولات أكتر" with lightning icon
 ///   3. Left: "ضحك مكمّل" with smiling laugh icon
-/// - Icon circles: 32x32, #FDC41E2B (Color(0x2BFDC41E))
+/// - Icon circles: 32x32, #FDC41E2B (AppColors.benefitsIconBg)
 /// - Labels: Alexandria 12sp SemiBold (w600), #1B1C1C, letter-spacing: 0.24
 class BenefitsTrioRow extends StatelessWidget {
   const BenefitsTrioRow({super.key});
@@ -32,7 +33,7 @@ class BenefitsTrioRow extends StatelessWidget {
         borderRadius: BorderRadius.circular(16.r),
         boxShadow: const [
           BoxShadow(
-            color: Color(0x0A000000),
+            color: AppColors.shadowSubtle,
             blurRadius: 8,
             offset: Offset(0, 2),
           ),
@@ -48,7 +49,7 @@ class BenefitsTrioRow extends StatelessWidget {
               label: morePunchlinesText,
             ),
           ),
-          Container(width: 1.w, height: 38.h, color: const Color(0xFFEFE9DC)),
+          Container(width: 1.w, height: 38.h, color: AppColors.borderSubtle),
 
           // Benefit 2 (Middle in RTL): "محاولات أكتر"
           Expanded(
@@ -57,7 +58,7 @@ class BenefitsTrioRow extends StatelessWidget {
               label: moreAttemptsText,
             ),
           ),
-          Container(width: 1.w, height: 38.h, color: const Color(0xFFEFE9DC)),
+          Container(width: 1.w, height: 38.h, color: AppColors.borderSubtle),
 
           // Benefit 3 (Left in RTL): "ضحك مكمّل"
           Expanded(
@@ -89,7 +90,7 @@ class _BenefitItem extends StatelessWidget {
           height: 32.h,
           decoration: const BoxDecoration(
             shape: BoxShape.circle,
-            color: Color(0x2BFDC41E), // #FDC41E2B
+            color: AppColors.benefitsIconBg,
           ),
           child: Center(
             child: SvgPicture.asset(
@@ -97,7 +98,7 @@ class _BenefitItem extends StatelessWidget {
               width: 16.w,
               height: 16.h,
               colorFilter: const ColorFilter.mode(
-                Color(0xFFFE9311),
+                AppColors.primaryDark,
                 BlendMode.srcIn,
               ),
             ),
@@ -106,10 +107,10 @@ class _BenefitItem extends StatelessWidget {
         SizedBox(height: 6.h),
         Text(
           label,
-          style: GoogleFonts.alexandria(
+          style: AppStyles.alexandria(
             fontSize: 12.sp,
             fontWeight: FontWeight.w600,
-            color: const Color(0xFF1B1C1C),
+            color: AppColors.textPrimaryDark,
             height: 16 / 12,
             letterSpacing: 0.24,
           ),

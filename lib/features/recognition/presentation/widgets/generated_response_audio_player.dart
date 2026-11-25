@@ -1,7 +1,7 @@
+﻿import 'package:fankosh/core/theme/app_text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/utils/assets.dart';
@@ -94,7 +94,7 @@ class _GeneratedResponseAudioPlayerState
                 ),
                 boxShadow: const [
                   BoxShadow(
-                    color: Color(0x0D000000), // 0px 1px 2px 0px #0000000D
+                    color: AppColors.shadowSubtleBlack, // 0px 1px 2px 0px #0000000D
                     blurRadius: 2,
                     offset: Offset(0, 1),
                   ),
@@ -109,7 +109,7 @@ class _GeneratedResponseAudioPlayerState
                     alignment: Alignment.centerLeft,
                     child: Text(
                       'HQ • 320kbps',
-                      style: GoogleFonts.alexandria(
+                      style: AppStyles.alexandria(
                         fontSize: 11.sp,
                         fontWeight: FontWeight.w600,
                         color: AppColors.textGrayBrown, // #807660
@@ -126,7 +126,7 @@ class _GeneratedResponseAudioPlayerState
                       vertical: 12.h,
                     ),
                     decoration: BoxDecoration(
-                      color: const Color(0xFFF7F5F5), // Light warm-gray fill
+                      color: AppColors.surfaceF7F5F5, // Light warm-gray fill
                       borderRadius: BorderRadius.circular(16.r),
                     ),
                     child: Row(
@@ -211,17 +211,17 @@ class _GeneratedResponseAudioPlayerState
                                     AudioHelper.formatDuration(
                                       _controller.currentPosition,
                                     ),
-                                    style: GoogleFonts.alexandria(
+                                    style: AppStyles.alexandria(
                                       fontSize: 11.sp,
                                       fontWeight: FontWeight.w700,
-                                      color: const Color(0xFF1B1C1C),
+                                      color: AppColors.textHeaderDark,
                                     ),
                                   ),
                                   Text(
                                     AudioHelper.formatDuration(
                                       _controller.totalDuration,
                                     ),
-                                    style: GoogleFonts.alexandria(
+                                    style: AppStyles.alexandria(
                                       fontSize: 11.sp,
                                       fontWeight: FontWeight.w600,
                                       color: AppColors.textGrayBrown,
@@ -251,7 +251,7 @@ class _GeneratedResponseAudioPlayerState
                       width: double.infinity,
                       padding: EdgeInsets.symmetric(vertical: 10.h),
                       decoration: BoxDecoration(
-                        color: const Color(0xFFF7F5F5), // Light warm-gray fill
+                        color: AppColors.surfaceF7F5F5, // Light warm-gray fill
                         borderRadius: BorderRadius.circular(12.r),
                       ),
                       child: Row(
@@ -260,15 +260,18 @@ class _GeneratedResponseAudioPlayerState
                           Icon(
                             Icons.volume_up_rounded,
                             size: 18.r,
-                            color: const Color(0xFF807660),
+                            color: AppColors.textGrayBrown,
                           ),
                           SizedBox(width: 8.w),
-                          Text(
-                            punchlineActionText,
-                            style: GoogleFonts.alexandria(
-                              fontSize: 11.sp,
-                              fontWeight: FontWeight.w500,
-                              color: const Color(0xFF4E4633),
+                          Flexible(
+                            child: Text(
+                              punchlineActionText,
+                              style: AppStyles.alexandria(
+                                fontSize: 11.sp,
+                                fontWeight: FontWeight.w500,
+                                color: AppColors.textSecondary,
+                              ),
+                              overflow: TextOverflow.ellipsis,
                             ),
                           ),
                         ],

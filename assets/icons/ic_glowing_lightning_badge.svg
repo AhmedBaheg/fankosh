@@ -1,0 +1,18 @@
+<svg width="94" height="94" viewBox="0 0 94 94" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Outer glowing halo ring (opacity 0.75, #FACC15 with 0.25 fill) -->
+  <circle cx="47" cy="47" r="40" fill="#FACC15" fill-opacity="0.25"/>
+  <!-- Middle soft glow -->
+  <circle cx="47" cy="47" r="34" fill="#FDE68A" fill-opacity="0.4"/>
+  <!-- Inner main circle with gradient -->
+  <circle cx="47" cy="47" r="30.5" fill="url(#paint0_linear_badge)" stroke="white" stroke-width="3"/>
+  <!-- Crisp vector lightning bolt -->
+  <path d="M49.5 33.5L38 48H46.5L44.5 60.5L56 46H47.5L49.5 33.5Z" fill="#F59E0B" stroke="#D97706" stroke-width="0.75" stroke-linejoin="round"/>
+  <path d="M48.8 35.5L39.8 47H46.5L45 56.5L53.8 45H47.2L48.8 35.5Z" fill="#FCD34D"/>
+  <defs>
+    <linearGradient id="paint0_linear_badge" x1="16.5" y1="77.5" x2="77.5" y2="16.5" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FACC15"/>
+      <stop offset="0.5" stop-color="#FCD34D"/>
+      <stop offset="1" stop-color="#FEF08A"/>
+    </linearGradient>
+  </defs>
+</svg>

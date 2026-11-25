@@ -1015,6 +1015,294 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Are you sure you want to log out?'**
   String get logoutConfirmation;
+
+  /// No description provided for @profileHeaderSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Everything about your account in one place'**
+  String get profileHeaderSubtitle;
+
+  /// No description provided for @edit.
+  ///
+  /// In en, this message translates to:
+  /// **'Edit'**
+  String get edit;
+
+  /// No description provided for @mySubscriptionPrefix.
+  ///
+  /// In en, this message translates to:
+  /// **'My Subscription:'**
+  String get mySubscriptionPrefix;
+
+  /// No description provided for @viewMyPlan.
+  ///
+  /// In en, this message translates to:
+  /// **'View My Plan'**
+  String get viewMyPlan;
+
+  /// No description provided for @attemptsRemainingThisMonth.
+  ///
+  /// In en, this message translates to:
+  /// **'attempts remaining this month'**
+  String get attemptsRemainingThisMonth;
+
+  /// No description provided for @settingsSectionTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Settings'**
+  String get settingsSectionTitle;
+
+  /// No description provided for @birthDateTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Date of Birth'**
+  String get birthDateTitle;
+
+  /// No description provided for @addBirthDateSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Add your birth date'**
+  String get addBirthDateSubtitle;
+
+  /// No description provided for @notificationsSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Manage Fankosh notifications'**
+  String get notificationsSubtitle;
+
+  /// No description provided for @countryTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Country'**
+  String get countryTitle;
+
+  /// No description provided for @arabic.
+  ///
+  /// In en, this message translates to:
+  /// **'Arabic'**
+  String get arabic;
+
+  /// No description provided for @english.
+  ///
+  /// In en, this message translates to:
+  /// **'English'**
+  String get english;
+
+  /// No description provided for @privacyAndSecurityTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Privacy & Security'**
+  String get privacyAndSecurityTitle;
+
+  /// No description provided for @privacyAndSecuritySubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Security and privacy settings'**
+  String get privacyAndSecuritySubtitle;
+
+  /// No description provided for @helpAndSupportSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Need help? We are here'**
+  String get helpAndSupportSubtitle;
+
+  /// No description provided for @aboutFankoshTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'About Fankosh'**
+  String get aboutFankoshTitle;
+
+  /// No description provided for @aboutFankoshSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'App information & version 1.4'**
+  String get aboutFankoshSubtitle;
+
+  /// No description provided for @chooseCountryTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose your country 🌍'**
+  String get chooseCountryTitle;
+
+  /// No description provided for @chooseCountrySubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Select the country you use Fankosh from.'**
+  String get chooseCountrySubtitle;
+
+  /// No description provided for @searchCountryHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Search country...'**
+  String get searchCountryHint;
+
+  /// No description provided for @saveChanges.
+  ///
+  /// In en, this message translates to:
+  /// **'Save Changes'**
+  String get saveChanges;
+
+  /// No description provided for @chooseLanguageTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose Language'**
+  String get chooseLanguageTitle;
+
+  /// No description provided for @chooseLanguageSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Select application display language.'**
+  String get chooseLanguageSubtitle;
+
+  /// No description provided for @markAllAsRead.
+  ///
+  /// In en, this message translates to:
+  /// **'Mark all as read'**
+  String get markAllAsRead;
+
+  /// No description provided for @planActivatedTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Your plan is active! 🎉'**
+  String get planActivatedTitle;
+
+  /// No description provided for @planActivatedSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Your subscription is ready... let\'s keep the laughs rolling!'**
+  String get planActivatedSubtitle;
+
+  /// No description provided for @attemptsRunningLowTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Your attempts are running low!'**
+  String get attemptsRunningLowTitle;
+
+  /// No description provided for @attemptsRunningLowSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Only 2 attempts left!'**
+  String get attemptsRunningLowSubtitle;
+
+  /// No description provided for @tapToChangePhoto.
+  ///
+  /// In en, this message translates to:
+  /// **'Tap to change photo'**
+  String get tapToChangePhoto;
+
+  /// No description provided for @birthDatePrivacyNote.
+  ///
+  /// In en, this message translates to:
+  /// **'We only use your birthday to celebrate your special day.'**
+  String get birthDatePrivacyNote;
+
+  /// No description provided for @planDetailsTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Plan Details'**
+  String get planDetailsTitle;
+
+  /// No description provided for @planDetailsSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Everything about your current subscription'**
+  String get planDetailsSubtitle;
+
+  /// No description provided for @attemptsBalanceTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Your Attempts Balance'**
+  String get attemptsBalanceTitle;
+
+  /// No description provided for @attemptsRemainingOutOf.
+  ///
+  /// In en, this message translates to:
+  /// **'attempts remaining out of'**
+  String get attemptsRemainingOutOf;
+
+  /// No description provided for @useAttemptsBeforeExpiry.
+  ///
+  /// In en, this message translates to:
+  /// **'Use your attempts before plan expiry.'**
+  String get useAttemptsBeforeExpiry;
+
+  /// No description provided for @activationDateTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Activation Date'**
+  String get activationDateTitle;
+
+  /// No description provided for @expiryDateTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Expiry Date'**
+  String get expiryDateTitle;
+
+  /// No description provided for @planDurationTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Plan Duration'**
+  String get planDurationTitle;
+
+  /// No description provided for @paidAmountTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Amount Paid'**
+  String get paidAmountTitle;
+
+  /// No description provided for @renewOrChangePlan.
+  ///
+  /// In en, this message translates to:
+  /// **'Renew or Change Plan'**
+  String get renewOrChangePlan;
+
+  /// No description provided for @activeBadge.
+  ///
+  /// In en, this message translates to:
+  /// **'Active'**
+  String get activeBadge;
+
+  /// No description provided for @chooseYourPlanTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose Your Plan'**
+  String get chooseYourPlanTitle;
+
+  /// No description provided for @chooseYourPlanSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Keep your laughs going with the right plan'**
+  String get chooseYourPlanSubtitle;
+
+  /// No description provided for @currentPlanBadge.
+  ///
+  /// In en, this message translates to:
+  /// **'Your Current Plan'**
+  String get currentPlanBadge;
+
+  /// No description provided for @expiresOnPrefix.
+  ///
+  /// In en, this message translates to:
+  /// **'Expires on'**
+  String get expiresOnPrefix;
+
+  /// No description provided for @availablePlansTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Available Plans'**
+  String get availablePlansTitle;
+
+  /// No description provided for @monthly.
+  ///
+  /// In en, this message translates to:
+  /// **'Monthly'**
+  String get monthly;
+
+  /// No description provided for @secureEncryptedPaymentNote.
+  ///
+  /// In en, this message translates to:
+  /// **'100% Secure & Encrypted Payment'**
+  String get secureEncryptedPaymentNote;
 }
 
 class _AppLocalizationsDelegate

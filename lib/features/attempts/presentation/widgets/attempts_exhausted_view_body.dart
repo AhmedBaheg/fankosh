@@ -1,7 +1,7 @@
+﻿import 'package:fankosh/core/theme/app_text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import '../../../../core/routing/routes.dart';
 import '../../../../core/shared_widgets/app_header_bar.dart';
@@ -63,10 +63,10 @@ class AttemptsExhaustedViewBody extends StatelessWidget {
                   padding: EdgeInsets.symmetric(horizontal: 20.w),
                   child: Text(
                     titleText,
-                    style: GoogleFonts.alexandria(
+                    style: AppStyles.alexandria(
                       fontSize: 28.sp,
                       fontWeight: FontWeight.w700,
-                      color: const Color(0xFF1B1C1C),
+                      color: AppColors.textPrimaryDark,
                       height: 36 / 28,
                       letterSpacing: -0.7,
                     ),
@@ -80,10 +80,10 @@ class AttemptsExhaustedViewBody extends StatelessWidget {
                   padding: EdgeInsets.symmetric(horizontal: 24.w),
                   child: Text(
                     '$sub1\n$sub2',
-                    style: GoogleFonts.alexandria(
+                    style: AppStyles.alexandria(
                       fontSize: 16.sp,
                       fontWeight: FontWeight.w400,
-                      color: const Color(0xFF4E4633),
+                      color: AppColors.textSecondary,
                       height: 26 / 16,
                       letterSpacing: 0.0,
                     ),
@@ -134,17 +134,17 @@ class AttemptsExhaustedViewBody extends StatelessWidget {
                         width: 18.w,
                         height: 18.h,
                         colorFilter: const ColorFilter.mode(
-                          Color(0xFF150E16),
+                          AppColors.textPrimary,
                           BlendMode.srcIn,
                         ),
                       ),
                       SizedBox(width: 8.w),
                       Text(
                         explorePlansText,
-                        style: GoogleFonts.alexandria(
+                        style: AppStyles.alexandria(
                           fontSize: 14.sp,
                           fontWeight: FontWeight.w700,
-                          color: const Color(0xFF150E16),
+                          color: AppColors.textPrimary,
                           height: 20 / 14,
                           letterSpacing: 0.14,
                         ),
@@ -165,10 +165,10 @@ class AttemptsExhaustedViewBody extends StatelessWidget {
                 ),
                 child: Text(
                   notNowText,
-                  style: GoogleFonts.alexandria(
+                  style: AppStyles.alexandria(
                     fontSize: 14.sp,
                     fontWeight: FontWeight.w500,
-                    color: const Color(0xFF4E4633),
+                    color: AppColors.textSecondary,
                     height: 22 / 14,
                   ),
                 ),

@@ -13,11 +13,13 @@ class AudioPlayerCard extends StatefulWidget {
   const AudioPlayerCard({
     super.key,
     required this.totalDurationSeconds,
+    this.audioFilePath,
     this.initialPositionSeconds = 0,
     this.onPlayStateChanged,
   });
 
   final int totalDurationSeconds;
+  final String? audioFilePath;
   final int initialPositionSeconds;
   final ValueChanged<bool>? onPlayStateChanged;
 
@@ -37,6 +39,7 @@ class _AudioPlayerCardState extends State<AudioPlayerCard> {
     super.initState();
     _controller = AudioPlaybackController(
       totalDurationSeconds: widget.totalDurationSeconds,
+      filePath: widget.audioFilePath,
       initialPositionSeconds: widget.initialPositionSeconds,
     )..addListener(_handleControllerUpdate);
   }
@@ -74,8 +77,8 @@ class _AudioPlayerCardState extends State<AudioPlayerCard> {
         return Center(
           child: Container(
             width: 310.w,
-            height: 235.h,
-            padding: EdgeInsets.symmetric(horizontal: 22.w, vertical: 20.h),
+            constraints: BoxConstraints(minHeight: 235.h),
+            padding: EdgeInsets.symmetric(horizontal: 22.w, vertical: 16.h),
             decoration: BoxDecoration(
               color: AppColors.surface,
               borderRadius: BorderRadius.circular(24.r),
@@ -88,6 +91,7 @@ class _AudioPlayerCardState extends State<AudioPlayerCard> {
               ],
             ),
             child: Column(
+              mainAxisSize: MainAxisSize.min,
               children: [
                 SizedBox(height: 8.h),
 

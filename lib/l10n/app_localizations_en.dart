@@ -488,4 +488,154 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get logoutConfirmation => 'Are you sure you want to log out?';
+
+  @override
+  String get profileHeaderSubtitle =>
+      'Everything about your account in one place';
+
+  @override
+  String get edit => 'Edit';
+
+  @override
+  String get mySubscriptionPrefix => 'My Subscription:';
+
+  @override
+  String get viewMyPlan => 'View My Plan';
+
+  @override
+  String get attemptsRemainingThisMonth => 'attempts remaining this month';
+
+  @override
+  String get settingsSectionTitle => 'Settings';
+
+  @override
+  String get birthDateTitle => 'Date of Birth';
+
+  @override
+  String get addBirthDateSubtitle => 'Add your birth date';
+
+  @override
+  String get notificationsSubtitle => 'Manage Fankosh notifications';
+
+  @override
+  String get countryTitle => 'Country';
+
+  @override
+  String get arabic => 'Arabic';
+
+  @override
+  String get english => 'English';
+
+  @override
+  String get privacyAndSecurityTitle => 'Privacy & Security';
+
+  @override
+  String get privacyAndSecuritySubtitle => 'Security and privacy settings';
+
+  @override
+  String get helpAndSupportSubtitle => 'Need help? We are here';
+
+  @override
+  String get aboutFankoshTitle => 'About Fankosh';
+
+  @override
+  String get aboutFankoshSubtitle => 'App information & version 1.4';
+
+  @override
+  String get chooseCountryTitle => 'Choose your country 🌍';
+
+  @override
+  String get chooseCountrySubtitle =>
+      'Select the country you use Fankosh from.';
+
+  @override
+  String get searchCountryHint => 'Search country...';
+
+  @override
+  String get saveChanges => 'Save Changes';
+
+  @override
+  String get chooseLanguageTitle => 'Choose Language';
+
+  @override
+  String get chooseLanguageSubtitle => 'Select application display language.';
+
+  @override
+  String get markAllAsRead => 'Mark all as read';
+
+  @override
+  String get planActivatedTitle => 'Your plan is active! 🎉';
+
+  @override
+  String get planActivatedSubtitle =>
+      'Your subscription is ready... let\'s keep the laughs rolling!';
+
+  @override
+  String get attemptsRunningLowTitle => 'Your attempts are running low!';
+
+  @override
+  String get attemptsRunningLowSubtitle => 'Only 2 attempts left!';
+
+  @override
+  String get tapToChangePhoto => 'Tap to change photo';
+
+  @override
+  String get birthDatePrivacyNote =>
+      'We only use your birthday to celebrate your special day.';
+
+  @override
+  String get planDetailsTitle => 'Plan Details';
+
+  @override
+  String get planDetailsSubtitle =>
+      'Everything about your current subscription';
+
+  @override
+  String get attemptsBalanceTitle => 'Your Attempts Balance';
+
+  @override
+  String get attemptsRemainingOutOf => 'attempts remaining out of';
+
+  @override
+  String get useAttemptsBeforeExpiry => 'Use your attempts before plan expiry.';
+
+  @override
+  String get activationDateTitle => 'Activation Date';
+
+  @override
+  String get expiryDateTitle => 'Expiry Date';
+
+  @override
+  String get planDurationTitle => 'Plan Duration';
+
+  @override
+  String get paidAmountTitle => 'Amount Paid';
+
+  @override
+  String get renewOrChangePlan => 'Renew or Change Plan';
+
+  @override
+  String get activeBadge => 'Active';
+
+  @override
+  String get chooseYourPlanTitle => 'Choose Your Plan';
+
+  @override
+  String get chooseYourPlanSubtitle =>
+      'Keep your laughs going with the right plan';
+
+  @override
+  String get currentPlanBadge => 'Your Current Plan';
+
+  @override
+  String get expiresOnPrefix => 'Expires on';
+
+  @override
+  String get availablePlansTitle => 'Available Plans';
+
+  @override
+  String get monthly => 'Monthly';
+
+  @override
+  String get secureEncryptedPaymentNote => '100% Secure & Encrypted Payment';
 }

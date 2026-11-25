@@ -9,6 +9,8 @@ import '../../../../core/theme/app_colors.dart';
 import '../../../../core/utils/assets.dart';
 import '../../../../core/utils/audio_helper.dart';
 import '../../../../l10n/app_localizations.dart';
+import 'share_audio_preview_card.dart';
+import 'share_dialog_action_buttons.dart';
 
 /// Modal dialog component for sharing AI punchline matching Page 11 design:
 /// - Dimensions: width: 325.w, minHeight: 445.5.h, borderRadius: 24.r, shadow: 0px 25px 50px -12px #00000040
@@ -168,195 +170,16 @@ class ShareResponseDialog extends StatelessWidget {
             SizedBox(height: 16.h),
 
             // 4. Inner Audio Preview Card (bg: #F6F5F2)
-            Container(
-              padding: EdgeInsets.symmetric(horizontal: 14.w, vertical: 12.h),
-              decoration: BoxDecoration(
-                color: AppColors.dialogCardBg, // #F6F5F2
-                borderRadius: BorderRadius.circular(16.r),
-              ),
-              child: Column(
-                children: [
-                  // Header Row inside card: "صوتك + رد فانكوش" on Right, Duration on Left
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    textDirection: TextDirection.rtl,
-                    children: [
-                      Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Icon(
-                            Icons.mic_none_rounded,
-                            size: 15.r,
-                            color: AppColors.primaryDark,
-                          ),
-                          SizedBox(width: 2.w),
-                          Text(
-                            '+',
-                            style: GoogleFonts.alexandria(
-                              fontSize: 12.sp,
-                              fontWeight: FontWeight.w500,
-                              color: AppColors.dialogMutedText,
-                            ),
-                          ),
-                          SizedBox(width: 2.w),
-                          Icon(
-                            Icons.movie_creation_outlined,
-                            size: 15.r,
-                            color: AppColors.primaryExtraDark,
-                          ),
-                          SizedBox(width: 4.w),
-                          Text(
-                            'صوتك + رد فانكوش',
-                            style: GoogleFonts.alexandria(
-                              fontSize: 12.sp,
-                              fontWeight: FontWeight.w500,
-                              color: AppColors.dialogMutedText, // #6B6572
-                              height: 16 / 12,
-                            ),
-                          ),
-                        ],
-                      ),
-                      Text(
-                        AudioHelper.formatDuration(combinedDuration), // e.g. "00:27"
-                        style: GoogleFonts.alexandria(
-                          fontSize: 12.sp,
-                          fontWeight: FontWeight.w500,
-                          color: AppColors.dialogTimestampText, // #9C9484
-                          height: 16 / 12,
-                        ),
-                      ),
-                    ],
-                  ),
-                  SizedBox(height: 12.h),
-
-                  // Waveform and Play Button Row
-                  Row(
-                    textDirection: TextDirection.rtl,
-                    children: [
-                      // Circular yellow play button on Right in RTL
-                      Container(
-                        width: 36.w,
-                        height: 36.h,
-                        decoration: const BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: AppColors.primary,
-                        ),
-                        child: Center(
-                          child: Padding(
-                            padding: EdgeInsets.only(left: 2.w),
-                            child: SvgPicture.asset(
-                              AppAssets.playIcon,
-                              width: 12.w,
-                              height: 14.h,
-                              colorFilter: const ColorFilter.mode(
-                                AppColors.primaryExtraDark, // #815600
-                                BlendMode.srcIn,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                      SizedBox(width: 10.w),
-
-                      // Two-tone Waveform (User voice: #815600, Fankoosh response: #FEC529)
-                      Expanded(
-                        child: SizedBox(
-                          height: 34.h,
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: List.generate(
-                              _dialogWaveformHeights.length,
-                              (index) {
-                                // First 6 bars: user recording portion (#815600)
-                                // Remaining 14 bars: Fankoosh AI response (#FEC529)
-                                final isUserVoicePortion = index < 6;
-                                final barColor = isUserVoicePortion
-                                    ? AppColors.primaryExtraDark // #815600
-                                    : AppColors.primary; // #FEC529
-
-                                return Container(
-                                  width: 2.8.w,
-                                  height: _dialogWaveformHeights[index].h,
-                                  decoration: BoxDecoration(
-                                    color: barColor,
-                                    borderRadius: BorderRadius.circular(2.r),
-                                  ),
-                                );
-                              },
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
+            ShareAudioPreviewCard(
+              combinedDurationSeconds: combinedDuration,
+              waveformHeights: _dialogWaveformHeights,
             ),
             SizedBox(height: 18.h),
 
-            // 5. Primary Share Button: "شارك القفشة" in #FEC529 pill
-            GestureDetector(
-              onTap: () {
-                Navigator.pop(context);
-              },
-              behavior: HitTestBehavior.opaque,
-              child: Container(
-                height: 48.h,
-                decoration: BoxDecoration(
-                  color: AppColors.primary, // #FEC529
-                  borderRadius: BorderRadius.circular(9999),
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    SvgPicture.asset(
-                      AppAssets.shareNodesIcon,
-                      width: 18.w,
-                      height: 18.h,
-                      colorFilter: const ColorFilter.mode(
-                        Color(0xFF150E16),
-                        BlendMode.srcIn,
-                      ),
-                    ),
-                    SizedBox(width: 8.w),
-                    Text(
-                      'شارك القفشة',
-                      style: GoogleFonts.alexandria(
-                        fontSize: 16.sp,
-                        fontWeight: FontWeight.w700,
-                        color: const Color(0xFF150E16),
-                        height: 24 / 16,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            SizedBox(height: 10.h),
-
-            // 6. Secondary Cancel Button: "مش دلوقتي" in #F0EFEF pill
-            GestureDetector(
-              onTap: () => Navigator.pop(context),
-              behavior: HitTestBehavior.opaque,
-              child: Container(
-                height: 48.h,
-                decoration: BoxDecoration(
-                  color: AppColors.dialogBtnSecondaryBg, // #F0EFEF
-                  borderRadius: BorderRadius.circular(9999),
-                ),
-                child: Center(
-                  child: Text(
-                    'مش دلوقتي',
-                    style: GoogleFonts.alexandria(
-                      fontSize: 14.sp,
-                      fontWeight: FontWeight.w600,
-                      color: AppColors.dialogMutedText, // #6B6572
-                      height: 20 / 14,
-                    ),
-                  ),
-                ),
-              ),
+            // 5. Action Buttons ("شارك القفشة" & "مش دلوقتي")
+            ShareDialogActionButtons(
+              onSharePressed: () => Navigator.pop(context),
+              onCancelPressed: () => Navigator.pop(context),
             ),
           ],
         ),
