@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -18,12 +19,19 @@ class MyApp extends StatelessWidget {
       designSize: const Size(390, 844),
       minTextAdapt: true,
       splitScreenMode: true,
+
+      rebuildFactor: (old, current) {
+        return old != current;
+      },
+
       builder: (context, child) {
-        return const MaterialApp(
+        return MaterialApp(
           debugShowCheckedModeBanner: false,
-          localizationsDelegates: AppLocalizations.localizationsDelegates,
-          supportedLocales: AppLocalizations.supportedLocales,
-          locale: Locale('ar'),
+          localizationsDelegates:
+          AppLocalizations.localizationsDelegates,
+          supportedLocales:
+          AppLocalizations.supportedLocales,
+          locale: const Locale('ar'),
           initialRoute: Routes.splashView,
           onGenerateRoute: AppRouter.generateRoute,
         );

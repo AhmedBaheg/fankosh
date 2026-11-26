@@ -47,16 +47,8 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
     }
   }
 
-  void _onSkipPressed(int pagesCount) {
-    if (_currentIndex < pagesCount - 1) {
-      _pageController.animateToPage(
-        pagesCount - 1,
-        duration: const Duration(milliseconds: 300),
-        curve: Curves.easeInOut,
-      );
-    } else {
-      _onCompleteOnboarding();
-    }
+  void _onSkipPressed() {
+    _onCompleteOnboarding();
   }
 
   Future<void> _onCompleteOnboarding() async {
@@ -105,7 +97,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
           child: Align(
             alignment: Alignment.centerRight,
             child: TextButton(
-              onPressed: () => _onSkipPressed(pages.length),
+              onPressed: _onSkipPressed,
               style: TextButton.styleFrom(
                 padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 4.h),
                 foregroundColor: AppColors.textSecondary,

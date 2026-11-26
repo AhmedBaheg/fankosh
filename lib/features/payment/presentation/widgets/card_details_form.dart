@@ -4,7 +4,6 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../../../core/shared_widgets/custom_text_field.dart';
-import '../../../../core/theme/app_colors.dart';
 import '../../../../core/utils/assets.dart';
 import 'card_expiry_cvv_fields.dart';
 

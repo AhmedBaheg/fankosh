@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import '../../../../core/routing/routes.dart';
 import '../../../../core/shared_widgets/app_header_bar.dart';
-import '../../../../core/theme/app_colors.dart';
 import '../../../../core/utils/assets.dart';
 import '../../../../l10n/app_localizations.dart';
 import 'account_settings_card.dart';
